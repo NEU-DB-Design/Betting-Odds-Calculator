@@ -6,7 +6,17 @@ import unicodedata
 from BettingLine import Team, BettingLine
 
 class Scraper():
+
+	def __init__(self):
+		t = Team.blankTeam()
+		self.teams = ['x', 'a', 'b']
+		if 'xsdf' in self.teams:
+			print 'found'
+		else:
+			print 'nope'
+		#self.teamList = [
 	
+	#teams 
 	url = 'http://sports.bovada.lv/sports-betting/nba-basketball-lines.jsp'
 	
 	def Run(self):
@@ -27,7 +37,6 @@ class Scraper():
 		print len(divs)
 		
 	def ParseSection(self, section):
-		#b = BettingLine
 		t = Team.blankTeam()
 	
 		self.Dump(section, 'indiv')
@@ -38,6 +47,7 @@ class Scraper():
 			spreads = section.find('div', 'line-normal').find('span', 'disabled')
 		if not spreads or len(spreads) < 2:
 			print 'SPREADS NOT FOUND'
+			return None
 		else:
 			print 'spread 1: ' + spreads[0].text
 			print 'spread 1: ' + spreads[1].text
@@ -48,20 +58,33 @@ class Scraper():
 			names = section.findAll('span', 'left disabled')
 		if not names or len(names) < 2:
 			print 'NAMES NOT FOUND.'
+			return None
 		else:
 			print 'Team 1: ' + names[0].text
 			print 'Team 2: ' + names[1].text
 			
-		# Check if this has already been scraped
-		# TODO
+		# Validate teams
+		if not self.CheckTeam(spreads[0], spreads[1]): # TODO change this to return a tuple for team 1 and 2
+			return None
+			
+		# Check if this line has already been scraped. If not, create a new line
+		if not self.CheckLine(names[0], names[1]) and not self.CheckTeam(spreads[0], spreads[1]):
+			b = BettingLine('', '', '', '')
+			return b
 		
-		# If not, add new
-		b = BettingLine('', '', '', '')
-		return b
+	def CheckTeam(self, teamName):
+		retrun (teamName in self.teams)
 		
+	def CheckLine(line):
+		return True
+		
+	def LoadTeams(self):
+		sqlString = 'SELECT * FROM TEAMS'
+		return ['steelers', 'ravens', 'patriots', 'jets']
+		# dal
 		
 	def Dump(self, text, location):
 		open(location, 'w').write(str(text))
 		
 sraper = Scraper()
-sraper.Run()
+#sraper.Run()

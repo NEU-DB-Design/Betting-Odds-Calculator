@@ -1,0 +1,3969 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us" class="use-reset">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>
+   Sportsline for Basketball  | Vegas.com
+  </title>
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+  <meta name="keywords" content="vegas sports book odds, vegas odds basketball" />
+  <meta name="description" content="Visit the premier Las Vegas portal, featuring the most up-to-date and in-depth guide to Las Vegas gambling and betting including the current betting line for basketball." />
+  <meta name="robots" content="noydir" />
+  <meta name="robots" content="noodp" />
+  <meta http-equiv="P3P" content="CP='OTI DSP COR IND CUR ADMa DEVa TAIa PSAa PSDa IVAa IVDa HISa OUR UNI COM NAV INT CNT STA'" />
+  <script type="text/javascript" src="/dtagent60_bp3_7000.js" data-dtconfig="rid=RID_440599458|rpid=1962459769|domain=vegas.com|tp=500,50,5|bandwidth=300_m">
+  </script>
+  <link href="/assets/css/wired/global/style.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/wired/pages/rx/style.css" rel="stylesheet" type="text/css" />
+  <script src="/common/js/jquery/jquery-core.js" type="text/javascript">
+  </script>
+  <script src="/common/js/jquery/jquery-ui.js" type="text/javascript">
+  </script>
+  <script src="/common/js/outside-wicket/widget-lib.js" type="text/javascript">
+  </script>
+  <script src="/incl/default.js" type="text/javascript">
+  </script>
+  <script src="/javascript/tealeaf.js" type="text/javascript">
+  </script>
+  <!-- Maxymiser script start -->
+  <script type="text/javascript" src="//service.maxymiser.net/cdn/vegas/js/mmcore.js">
+  </script>
+  <!-- Maxymiser script end -->
+ </head>
+ <body id="more" ontouchstart="" onmouseover="">
+  <!-- Header -->
+  <script type="text/javascript" language="javascript" src="/common/js/jquery/jquery-core.js">
+  </script>
+  <script type="text/javascript" src="/common/js/fed.js">
+  </script>
+  <script src="/common/js/outside-wicket/widget-lib.js">
+  </script>
+  <script>
+   cyljq(function(jq){
+    (function(selectors){
+    	var VCLICK_EVENT_NAME = 'vclick',
+    		eventRanOnce = false;
+    		jqDoc = jq(document);
+    		
+    	jqDoc.on('touchstart.trackFakeLink', function(ev){
+    		var el = ev.target;
+    		
+    		jqDoc.one('touchmove.' + VCLICK_EVENT_NAME + ' touchstart.' + VCLICK_EVENT_NAME + ' touchend.' + VCLICK_EVENT_NAME, function(te_ev){
+    			jqDoc.off('.' + VCLICK_EVENT_NAME);
+    			if(ev.target === te_ev.target &amp;&amp; te_ev.type !== 'touchmove'){
+    				var newEvent = jq.Event(VCLICK_EVENT_NAME, jq.extend({}, te_ev, {type:VCLICK_EVENT_NAME}));
+    				jqDoc.trigger(newEvent)
+    			}
+    		});
+    	});
+    	
+    	jqDoc.on('click.trackFakeLink vclick.trackFakeLink', selectors.join(','), function(ev){
+    		if(eventRanOnce == false) {
+    			if(ev.type === VCLICK_EVENT_NAME){
+    				jqDoc.off('click.trackFakeLink');
+    			}else{
+    				jqDoc.off('vclick.trackFakeLink touchstart.trackFakeLink');
+    			}
+    			
+    			eventRanOnce = true;
+    		}
+    		if(typeof fed !== 'undefined' &amp;&amp; fed.analytics){
+    			fed.analytics.trackEvent({event: 'click:Heading', category: 'Heading', label: jq.trim(jq(ev.target).text()), nonInteraction: false});
+    		}
+    	});
+    })(
+    /* List of selectors that look like links */
+    [
+    '.heading-1',
+    '.heading-2', 
+    '.heading-2-normal',
+    '.heading-7',
+    '.alt-lg-titled-list-header',
+    '.standard-titled-list-header',
+    '.box-info-hdr-underlined.txt-h2-hi',
+    '.txt-h2',
+    '.main-page-title',
+    '.text-h-bordered',
+    '.paint-transparent-eyeshadow.text-h5.text-underline'
+    ]);
+});
+  </script>
+  <script id="TealiumTagManager" class="rx_assembly" type="text/javascript">
+   (function(a,b,c,d){
+    a='//tags.tiqcdn.com/utag/vegas/main/prod/utag.js';
+    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+    })();
+  </script>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-FMQT" height="0" width="0" style="display:none;visibility:hidden">
+   </iframe>
+  </noscript>
+  <script id="GoogleTagManager">
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtmOnload'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','cylDataLayer','GTM-FMQT');
+  </script>
+  <!-- End Google Tag Manager -->
+  <div sizcache="0" sizset="0">
+   <div id="header" class="container-fluid">
+    <div class="row">
+     <div class="header-branding-box container">
+      <div class="header-branding row" data-category="SiteHeader" data-track="click" data-type="SiteHeader">
+       <div class="header-logo-box col-lg-5 col-xs-24">
+        <a class="header-ref-home" href="/" data-category="SiteHeader" data-track="click" data-type="SiteHeader">
+         <img src="/images/logoHzGradientLight.gif" alt="VEGAS.com Logo" height="49" width="224" data-label="Logo" class="header-logo" />
+        </a>
+       </div>
+       <div class="header-nav-trigger hidden-md hidden-lg visible-sm-block" onclick="cyljq('#cylTopNav').toggleClass('hidden-sm')">
+       </div>
+       <div class="header-utility-list hidden-xs">
+        <div id="cylUserQualification" style="display:none;">
+        </div>
+        <script id="insertUserQualificationsWidget">
+         function insertUserQualificationsWidget(jsonResp){
+    			if(jsonResp){
+       				Cyllenius.Widget.Cache.insertCachedWidgetContent("cylUserQualification", jsonResp);
+    			}
+    		}
+        </script>
+        <script src="/mytrip/app/userQualificationsInfo?json=true&amp;jsoncallback=insertUserQualificationsWidget" id="cyl-userQualificationsTagData">
+        </script>
+        <div id="cylVisitorInfo" style="display:none;" data-fed-plugin="widget" data-fed-widget-url="/mytrip/app/gaInfo">
+        </div>
+        <div id="cylMinicart" class="header-utility-ajaxwrapper text-right" data-fed-plugin="widget" data-fed-widget-url="/mytrip/app/Widget?widgetCode=minicart">
+        </div>
+       </div>
+       <div class="header-branding-list-box col-lg-18 col-sm-12 col-xs-2">
+        <ul class="header-branding-list">
+         <li class="col-sm-16 col-lg-6 hidden-xs">
+          <a class="header-ref-phone ref ref-phone" href="javascript:void(0);">
+           <span class="header-branding-label text-nowrap">
+            1-866-983-4279
+           </span>
+          </a>
+         </li>
+         <li class="col-sm-4 hidden-xs">
+          <a class="header-ref-chat ref ref-chat" href="/chat/" onclick="javascript:window.open(this.href, 'name', 'height=660, width=660, location=0, menubar=0, status=0'); return false;">
+           <span data-label="{{innerText}}" class="header-branding-label hidden-sm">
+            <span class="text-nowrap">
+             Chat with a
+            </span>
+            <span class="text-nowrap">
+             Vegas Insider
+            </span>
+           </span>
+          </a>
+         </li>
+         <li class="col-sm-4 popover-holder hidden-xs">
+          <div class="popover text-left text-prose text-whitespace-normal" data-src="/incl/q12003/info_hotelsearch_bestrate.html" data-fed-plugin="popover" style="display: none;">
+           <a class="header-ref-guarantee popover-below-end" href="#" style="width: 100%;">
+            <span data-label="BPG" class="ref ref-like" style="width: 100%;">
+             <span class="header-branding-label hidden-sm">
+              Best Price Guarantee
+             </span>
+            </span>
+           </a>
+           <span class="popover-close">
+           </span>
+          </div>
+         </li>
+         <!-- Part of HAU test: doing inline styles so I don't have to pollute our sheets for this test -->
+         <li class="col-sm-4 col-lg-6 popover-holder">
+          <div class="popover text-left text-prose text-whitespace-normal" data-fed-plugin="popover" style="display: none;">
+           <a class="vdcPromoCodeEntry popover-below-end" href="#">
+            <span data-track-click="Radio-TV Icon" data-type="Link" class="ref ref-mic header-ref-mic popover-below-end">
+             <span class="header-branding-label hidden-sm">
+              <span class="text-nowrap">
+               Heard about us
+              </span>
+              <span class="text-nowrap">
+               on Radio or TV?
+              </span>
+             </span>
+            </span>
+           </a>
+           <div class="popover-content">
+            <div class="vdcPromoCodeEntryFormTitle">
+             Heard about us on radio or TV?
+            </div>
+            <form class="text-top" id="vdcPromoCodeForm" method="post">
+             <input class="input" type="text" size="24" value="" data-fed-plugin="mockinput" placeholder="Enter Promo Code" name="promocodeField:promoCode" id="promoCode111" style="width:60%;margin-right:0.2em;" />
+             <button class="cta-action" id="submitPromoCode" name="promoSubmitButton">
+              GO
+             </button>
+            </form>
+            <span class="popover-close">
+            </span>
+           </div>
+          </div>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <style class="hotfix2015-02-26">
+      .hotfix2015-02-26_layout-vdc-headerLogo,
+	#shows .product-details-title-box {
+		height: auto;
+	}
+	
+	.hotfix2015-02-27_layout-vdc-headerLogo,
+	#header .header-search {
+		font-size: 16px;
+	}
+     </style>
+     <div class="header-nav hidden-sm" id="cylTopNav">
+      <ul class="header-nav-list" data-category="TopNav" data-track="click" data-type="TopNav">
+       <li class="header-nav-list-item" data-topnav="subwrap">
+        <a class="header-nav-link header-ref-hotels" data-label="Hotels" target="_self" title="Las Vegas Hotels" href="http://www.vegas.com/resorts/index.html">
+         <span>
+          Hotels
+         </span>
+        </a>
+       </li>
+       <li class="header-nav-list-item" data-topnav="subwrap">
+        <a class="header-nav-link header-ref-airhotel" data-label="AIR+HOTEL" target="_self" title="" href="http://www.vegas.com/lasvegastraveldeals/index.html">
+         <span>
+          AIR+HOTEL
+         </span>
+        </a>
+       </li>
+       <li class="header-nav-list-item" data-topnav="subwrap">
+        <a class="header-nav-link header-ref-shows" data-label="Shows" target="_self" title="Vegas Shows" href="http://www.vegas.com/shows/index.html">
+         <span>
+          Shows
+         </span>
+        </a>
+       </li>
+       <li class="header-nav-list-item" data-topnav="subwrap">
+        <a class="header-nav-link header-ref-tours" data-label="Tours" target="_self" title="Tours" href="http://www.vegas.com/tours/index.html">
+         <span>
+          Tours
+         </span>
+        </a>
+       </li>
+       <li class="header-nav-list-item" data-topnav="subwrap">
+        <a class="header-nav-link header-ref-attractions" data-label="Attractions" target="_self" title="Attractions" href="http://www.vegas.com/attractions/index.html">
+         <span>
+          Attractions
+         </span>
+        </a>
+       </li>
+       <li class="header-nav-list-item" data-topnav="subwrap">
+        <a class="header-ref-subnav header-nav-link header-ref-clubs" data-label="Clubs" target="_self" title="Nightlife" href="http://www.vegas.com/nightlife/index.html" aria-haspopup="true">
+         <span>
+          Clubs
+         </span>
+        </a>
+        <ul class="header-subnav-list" data-topnav="subnav">
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-nightclubs" data-label="Nightclubs" target="_self" title="" href="http://www.vegas.com/nightclubs/index.html" data-topnav="sublink">
+           <span>
+            Nightclubs
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-bars" data-label="Bars" target="_self" title="" href="http://www.vegas.com/nightlife/bars/index.html" data-topnav="sublink">
+           <span>
+            Bars
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-stripclubs" data-label="Strip Clubs" target="_self" title="" href="http://www.vegas.com/nightlife/stripclubs/index.html" data-topnav="sublink">
+           <span>
+            Strip Clubs
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-gaybars" data-label="Gay Bars" target="_self" title="" href="http://www.vegas.com/nightlife/gayclubs/index.html" data-topnav="sublink">
+           <span>
+            Gay Bars
+           </span>
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="header-nav-list-item" data-topnav="subwrap">
+        <a class="header-nav-link header-ref-weddings" data-label="WEDDINGS" target="_self" title="Weddings" href="http://www.vegas.com/weddings/index.html">
+         <span>
+          WEDDINGS
+         </span>
+        </a>
+       </li>
+       <li class="header-nav-list-item" data-topnav="subwrap">
+        <a class="header-ref-subnav header-nav-link header-ref-more" data-label="More" target="_self" title="More" href="http://www.vegas.com/lounge/index.html" aria-haspopup="true">
+         <span>
+          More
+         </span>
+        </a>
+        <ul class="header-subnav-list" data-topnav="subnav">
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-st.patrick'sday" data-label="St. Patrick's Day" target="_self" title="" href="http://www.vegas.com/stpatsday/index.html" data-topnav="sublink">
+           <span>
+            St. Patrick's Day
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-groupbookings" data-label="Group Bookings" target="_self" title="" href="http://www.vegas.com/groups/grouptravel/index.html" data-topnav="sublink">
+           <span>
+            Group Bookings
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-dining" data-label="Dining" target="_self" title="Dining" href="http://www.vegas.com/restaurant/index.html" data-topnav="sublink">
+           <span>
+            Dining
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-golf" data-label="Golf" target="_self" title="Golf" href="http://www.vegas.com/golf/index.html" data-topnav="sublink">
+           <span>
+            Golf
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-spas" data-label="Spas" target="_self" title="Spas" href="http://www.vegas.com/spas/index.html" data-topnav="sublink">
+           <span>
+            Spas
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-vegasguide" data-label="Vegas Guide" target="_self" title="Vegas Guide" href="http://www.vegas.com/traveltips/index.html" data-topnav="sublink">
+           <span>
+            Vegas Guide
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-gaming" data-label="Gaming" target="_self" title="Gaming" href="http://www.vegas.com/gaming/index.html" data-topnav="sublink">
+           <span>
+            Gaming
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-giftcard" data-label="Gift Card" target="_self" title="Gift Card" href="http://www.vegas.com/giftcard/index.html" data-topnav="sublink">
+           <span>
+            Gift Card
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-shopping" data-label="Shopping" target="_self" title="Shopping" href="http://www.vegas.com/shopping/index.html" data-topnav="sublink">
+           <span>
+            Shopping
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-transportation" data-label="Transportation" target="_self" title="" href="http://www.vegas.com/transportation/index.html" data-topnav="sublink">
+           <span>
+            Transportation
+           </span>
+          </a>
+         </li>
+         <li class="header-subnav-item">
+          <a class="box padding-1 header-ref-blog" data-label="Blog" target="_self" title="" href="http://blog.vegas.com" data-topnav="sublink">
+           <span>
+            Blog
+           </span>
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="header-nav-list-item" data-topnav="subwrap">
+        <a class="header-nav-link header-ref-deals ref ref-spacing ref-deal" data-label="DEALS" target="_self" title="Deals" href="http://www.vegas.com/deals/index.html">
+         <span>
+          DEALS
+         </span>
+        </a>
+       </li>
+       <li class="header-search" data-fed-plugin="vegassearch" data-placeholder="Search" data-search-text="Search" data-proxysheet="vegas" data-client="vegas">
+       </li>
+      </ul>
+     </div>
+     <script class="rx-layout_vdc_topNavigation" type="text/javascript">
+      cyljq(function topNavScripts(jq){
+		
+		function toggleTitleAttr(e){
+			jq(this).attr('title', function(idx, oldTitle){
+				var ret = jq(this).data('oldTitle') || '';
+				jq(this).data('oldTitle', oldTitle);
+				return ret;
+			});
+		}
+		
+		function fixIOSTouchNav(e){
+			jq(document).one('touchstart', function(we){
+				jq('.isActive', '#cylTopNav').removeClass('isActive');
+			});
+			var jTopLink = jq(e.currentTarget).addClass('isActive').find('ul[data-topnav="subnav"]').siblings('a');
+			//var jTopLink = jq(e.currentTarget).addClass('isActive').children().children('[data-topnav="subnav"]').siblings('a');
+			if ( jTopLink.has(e.target).length || jTopLink.is(e.target) ) {
+				e.preventDefault();
+			}
+		}
+		
+		jq('#cylTopNav')
+		.on('touchstart touchend', '[data-topnav="subwrap"]', fixIOSTouchNav)
+		.on('hover', '[title]', toggleTitleAttr);
+		
+		try { // Change parent location when not coming from or managed by vegas.com
+			if(top.location.hostname.indexOf('vegas.com') &lt;= 0 &amp;&amp; jq.cookie('controller') != 'vegas') {
+				parent.location = self.location.href;
+			}
+		} catch(e){}
+	});
+     </script>
+    </div>
+   </div>
+   <!-- HAU test : promo code response. Again, doing inline styles so I don't corrupt our sheets. This is obviously dirty code as it's going to be ripped out. -->
+   <div id="vdcPromoCodePanel" class="promo-code-widget-container" data-fed-plugin="widget" data-fed-widget-url="/mytrip/app/Widget?widgetCode=HeardAboutUs" data-fed-widget-type="replace" data-fed-widget-update-content-selector="#promoCodeWidget" data-fed-widget-update-url="/mytrip/app/PromoCodeWidgetServicePage">
+   </div>
+   <script>
+    cyljq(function heardAboutUs(jq){
+	//this is just to dirty test promo code stuff
+	jq( "#vdcPromoCodeForm" ).submit(function( event ) {
+		var enteredCode = jq("input#promoCode111").val();
+		var label = 'Submit code: ' + enteredCode;
+		
+		fed.analytics.trackEvent({ event: 'click:Button', category: 'SiteHeader', label: label, nonInteraction: false });
+		jq(document).trigger({ type:"widgetSubmitted", params: enteredCode });
+		jq(this).closest('.popover').fed('popover', 'toggle');
+		
+		
+		//Prevent the form from being submitted
+		event.preventDefault();
+	});
+	
+	//Fire impressions for the feedback panel 
+	jq('#vdcPromoCodePanel').on('widgetReplaced', function(ev, content){
+		var label = cyljq('#cyl-promo-code-feedback').text();
+		
+		if(label){
+			fed.analytics.trackEvent({
+				event : 'impression:Error',
+				nonInteraction : true,
+				label : label,
+				category : 'SiteHeader'
+			});
+		}
+	});
+});
+   </script>
+   <!-- end test -->
+  </div>
+  <!-- unsupported browser message -->
+  <!--[if lte IE 7]&gt;
+&lt;style&gt;
+.message-upgrade-browser{ position: relative; z-index: 50000; left: 0; right: 0;}
+.message-upgrade-browser .jqmClose{
+	text-indent: 9999px;
+	right: 0;
+	top: 0;
+	position: absolute;
+}
+.message-close-link {
+	cursor: pointer;
+}
+.message-close-box {
+	text-align: center;
+}
+&lt;/style&gt;
+&lt;div class="message-upgrade-browser"&gt;
+&lt;a class="jqmClose message-close"&gt;CLOSE&lt;/a&gt;
+&lt;p class="message-header"&gt;
+Get the most out of
+VEGAS.com
+.
+&lt;/p&gt;
+&lt;p class="message-body"&gt;
+You have browser that is limiting the way the website looks and behaves. To use our site as it is intended, you will need to download a newer browser. The browsers we support are:
+&lt;ul&gt;
+	&lt;li&gt;Internet Explorer 8&lt;/li&gt;
+	&lt;li&gt;Internet Explorer 9&lt;/li&gt;
+	&lt;li&gt;Internet Explorer 10&lt;/li&gt;
+	&lt;li&gt;Firefox&lt;/li&gt;
+	&lt;li&gt;Chrome&lt;/li&gt;
+	&lt;li&gt;Safari&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;p class="message-close-box"&gt;&lt;a class="message-close message-close-link"&gt;Close Message&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+(function($){
+	var cookieDomain = window.location.hostname.replace(/[-\w]+(\.\w[-\w]*)+(\.\w[-\w]*)+/, "$1$2");
+	if(document.cookie.indexOf('showBrowserUpgradeMsg=1') != -1){
+		$('.message-upgrade-browser').hide();
+	}
+	
+	//If any page popup links are clicked, set the cookie to never show it again
+	$('.message-close').click(function(){
+		document.cookie="showBrowserUpgradeMsg=1; path=/; domain=" + cookieDomain;
+		$('.message-upgrade-browser').hide();
+	});
+})(cyljq);
+&lt;/script&gt;
+&lt;![endif]-->
+  <!-- / end messaging -->
+  <!-- /Header -->
+  <!-- body -->
+  <div id="document" class="container-fluid">
+   <!-- Rx layout id: 204944 -->
+   <div class="bumper bumper-top">
+    <div class="bumper-content" id="bumperTopContent">
+    </div>
+   </div>
+   <div class="row">
+    <div class="container">
+     <div class="row">
+      <div class="rx-layout">
+       <div id="col1" class="column rx-grid-col col-fixed-300">
+        <div class="recursive-navon-slot rx-slot-item">
+         <div class="cols-1 content-cols subnav-untitled-list-box list-box use-reset micro-clear" data-type="rxList" data-category="Las Vegas gambling" data-track="click">
+          <div class="subnav-untitled-list base-list">
+           <div class="subnav-untitled-list-row list-row">
+            <div class="subnav-untitled-list-item list-item">
+             <div class="cols-1 content-cols standard-titled-list-box list-box use-reset micro-clear" data-type="rxList" data-category="Inside Gambling" data-track="click">
+              <h2 class="standard-titled-list-header list-header">
+               Inside Gambling
+              </h2>
+              <div class="standard-titled-list base-list">
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/gaming/jackpots/index.html" data-label="{{innerText}}">
+                  Jackpots
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/gaming/slot-tournaments/index.html" data-label="{{innerText}}">
+                  Slot tournaments
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/gaming/poker-rooms/index.html" data-label="{{innerText}}">
+                  Poker
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/gaming/bingo/index.html" data-label="{{innerText}}">
+                  Bingo
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/gaming/sportsline/index.html" data-label="{{innerText}}">
+                  Today's sports betting line
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/gaming/futures/index.html" data-label="{{innerText}}">
+                  Futures
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/gaming/sportsbooks/index.html" data-label="{{innerText}}">
+                  Sports books
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/gaming/gaming-tips/sports-betting/index.html" data-label="{{innerText}}">
+                  Sports betting
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="http://www.lasvegassun.com/sports/" data-label="{{innerText}}">
+                  Sports news
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/gaming/gaming-tips/index.html" data-label="{{innerText}}">
+                  How to gamble
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="http://www.lasvegassun.com/business/gaming/" data-label="{{innerText}}">
+                  Gaming news
+                 </a>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="subnav-untitled-list-row list-row">
+            <div class="subnav-untitled-list-item list-item">
+             <div class="cols-1 content-cols standard-titled-list-box list-box use-reset micro-clear" data-type="rxList" data-category="You Also Might Be Interested In" data-track="click">
+              <h2 class="standard-titled-list-header list-header">
+               You Also Might Be Interested In
+              </h2>
+              <div class="standard-titled-list base-list">
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/restaurant/index.html" data-label="{{innerText}}">
+                  Las Vegas restaurants
+                 </a>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="subnav-untitled-list-row list-row">
+            <div class="subnav-untitled-list-item list-item">
+             <div class="cols-1 content-cols standard-titled-list-box list-box use-reset micro-clear" data-type="rxList" data-category="For your Vegas Vacation" data-track="click">
+              <h2 class="standard-titled-list-header list-header">
+               For your Vegas Vacation
+              </h2>
+              <div class="standard-titled-list base-list">
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/resorts/index.html" data-label="{{innerText}}">
+                  Las Vegas hotels
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/shows/index.html" data-label="{{innerText}}">
+                  Las Vegas show tickets
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/tours/index.html" data-label="{{innerText}}">
+                  Las Vegas tours
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/nightlife/index.html" data-label="{{innerText}}">
+                  Las Vegas nightlife
+                 </a>
+                </div>
+               </div>
+               <div class="standard-titled-list-row list-row">
+                <div class="standard-titled-list-item list-item">
+                 <a class="base-link" href="/golf/index.html" data-label="{{innerText}}">
+                  Las Vegas golf
+                 </a>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="recursive-navon-slot rx-slot-item">
+         <div id="gptAd300a" class="gpt-ad-frame">
+         </div>
+        </div>
+        <div class="recursive-navon-slot rx-slot-item">
+         <div id="gptAd300b" class="gpt-ad-frame">
+         </div>
+        </div>
+       </div>
+       <div id="col2" class="column rx-grid-col col-fixed-648">
+        <h1 class="main-page-title layout-module">
+         Sportsline for Basketball
+        </h1>
+        <!-- data-rx-slot-id="735" -->
+        <div class="rx-slot-item" data-rx-content-id="204732">
+         <p>
+          Today's line is constantly updated throughout the day. Lines are delayed by 15 minutes. Lines are courtesy of 
+          <a href="http://www.vegasinsider.com/">
+           <b>
+            Vegasinsider.com
+           </b>
+          </a>
+          . (Lines are listed with home team at bottom.)
+         </p>
+         <p>
+          The daily line is provided for informational purposes only. This is not a betting site.
+         </p>
+         <p>
+          <font color="#ff0000">
+           <script type="text/javascript">
+            /**/
+document.write("Current as of " + document.lastModified);
+/**/
+           </script>
+          </font>
+         </p>
+         <p>
+          <b>
+           Lines For:
+           <a href="/gaming/sportsline/football/">
+            Football
+           </a>
+           |
+           <a href="/gaming/sportsline/college-football/">
+            NCAA Football
+           </a>
+           |
+           <a href="/gaming/sportsline/canadian-football/">
+            Canadian Football
+           </a>
+           |
+           <a href="/gaming/sportsline/baseball/">
+            Baseball
+           </a>
+           |
+           <a href="/gaming/sportsline/basketball/">
+            Basketball
+           </a>
+           |
+           <a href="/gaming/sportsline/college-basketball/">
+            College Basketball
+           </a>
+           |
+           <a href="/gaming/sportsline/hockey/">
+            Hockey
+           </a>
+          </b>
+         </p>
+        </div>
+        <div class="rx-slot-item" data-rx-content-id="204738">
+         <style>
+          table.sportsline { 
+border-width: 0px; 
+border-style: solid; 
+border-color: black; 
+} 
+
+table.sportsline td { 
+border-width: 0 px; 
+padding: 4px; 
+border-style: solid; 
+border-color: black; 
+} 
+
+table.sportsline hr {
+border: 1px inset;
+}
+#sportslineData &gt; table:first-child {
+width: 610px !important;
+}
+table.sportsline tr:nth-child(1) td {
+background: #895E95;
+}
+font[color*="#ff0000"]{
+color: #895e95;
+}
+         </style>
+         <div id="sportslineData">
+          <table border="0">
+           <tr>
+            <td width="90%">
+             <table class="sportsline" width="100%" cellpadding="3" cellspacing="0">
+              <tr>
+               <td bgcolor="#0033cc" colspan="8">
+                <center>
+                 <font face="arial" color="ffffff" size="2">
+                  <b>
+                   National Basketball Association
+                  </b>
+                 </font>
+                </center>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td>
+                <font face="Arial" size="2">
+                 <b>
+                  Time
+                 </b>
+                </font>
+               </td>
+               <td>
+                <font face="Arial" size="2">
+                 <b>
+                  &nbsp;
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 <a href="/resorts/caesars/index.html">
+                  <b>
+                   Caesars
+                  </b>
+                 </a>
+                 -
+                 <br />
+                 <a href="/resorts/lvhilton/index.html">
+                  <b>
+                   Hilton
+                  </b>
+                 </a>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 <a href="/resorts/mgm2/index.html">
+                  <b>
+                   MGM
+                  </b>
+                 </a>
+                 -
+                 <br />
+                 <a href="/resorts/mirage/index.html">
+                  <b>
+                   Mirage
+                  </b>
+                 </a>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 <a href="/resorts/sstation/index.html">
+                  <b>
+                   Stations
+                  </b>
+                 </a>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 10
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Orlando
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 4:05 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Indiana
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Favorite
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 IND
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 IND
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 IND
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Point spread
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -8&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -8
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -8&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 187&frac12;o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 188&frac12;u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 187&frac12;o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total money line
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -125
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 10
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  New Orleans
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 4:35 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Brooklyn
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Favorite
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 NJN
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 NJN
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 NJN
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Point spread
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -2&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -2&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -2&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 192o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 192&frac12;o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 192&frac12;o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total money line
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 10
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Toronto
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 5:35 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at San Antonio
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Favorite
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 SAS
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 SAS
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 SAS
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Point spread
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -7
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -7&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -7&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 205o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 203&frac12;o
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 204&frac12;o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total money line
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -135
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 10
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Cleveland
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 5:35 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Dallas
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Favorite
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 CLE
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 CLE
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 CLE
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Point spread
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -4
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -4
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -4&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 200&frac12;o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 201&frac12;o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 201&frac12;o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total money line
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 10
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  New York
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 6:05 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Utah
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Favorite
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 UTH
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 UTH
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 UTH
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Point spread
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -14
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -13&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -13&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 179o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 179&frac12;u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 178&frac12;o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total money line
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -115
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 10
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Detroit
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 7:35 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at L.A. Lakers
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Favorite
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 DET
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 DET
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 DET
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Point spread
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -3&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -3&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -4
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 202&frac12;o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 202&frac12;o
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 203o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total money line
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -115
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 11
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Chicago
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 4:05 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Philadelphia
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Favorite
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 CHI
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 CHI
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Point spread
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -5&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -5&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 188o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total money line
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 11
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Sacramento
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 4:05 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Charlotte
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                &nbsp;
+               </td>
+               <td align="center" colspan="6">
+                <font face="Arial" size="2">
+                 Point spreads have not been posted for this contest
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 11
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Memphis
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 4:35 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Boston
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Favorite
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 MEM
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Point spread
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -5
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 11
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Brooklyn
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 4:35 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Miami
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                &nbsp;
+               </td>
+               <td align="center" colspan="6">
+                <font face="Arial" size="2">
+                 Point spreads have not been posted for this contest
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 11
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Orlando
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 5:05 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Milwaukee
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                &nbsp;
+               </td>
+               <td align="center" colspan="6">
+                <font face="Arial" size="2">
+                 Point spreads have not been posted for this contest
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 11
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  L.A. Clippers
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 5:05 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Oklahoma City
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Favorite
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 OKL
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 OKL
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Point spread
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -7
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -7
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 209&frac12;o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total money line
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 11
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Atlanta
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 6:05 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Denver
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                &nbsp;
+               </td>
+               <td align="center" colspan="6">
+                <font face="Arial" size="2">
+                 Point spreads have not been posted for this contest
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 11
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Minnesota
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 7:05 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Phoenix
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                &nbsp;
+               </td>
+               <td align="center" colspan="6">
+                <font face="Arial" size="2">
+                 Point spreads have not been posted for this contest
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 11
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Houston
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 7:35 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Portland
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Favorite
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 POR
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 POR
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Point spread
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -2&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -2&frac12;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 207o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total money line
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="8">
+                <hr />
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 Mar. 11
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  Detroit
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td nowrap="nowrap">
+                <font face="Arial" size="2">
+                 7:35 p.m.&nbsp;
+                </font>
+               </td>
+               <td bgcolor="E9EDF8" nowrap="nowrap">
+                <font face="Arial" size="2">
+                 <b>
+                  at Golden State
+                 </b>
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Favorite
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 GSW
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 GSW
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td nowrap="nowrap" align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Point spread
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -14
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -14
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr bgcolor="e5e5e5">
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 205&frac12;o/u
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="2">
+                <font face="Arial" size="2">
+                 Total money line
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 -110
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                 &nbsp;
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+               <td align="center">
+                <font face="Arial" size="2">
+                </font>
+               </td>
+              </tr>
+             </table>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="rx-slot-item" data-rx-content-id="204733">
+         <p>
+          <b>
+           More sports betting coverage:
+          </b>
+         </p>
+         <ul class="bulleted-list">
+          <li>
+           <a href="/gaming/gaming-tips/sports-betting/">
+            <b>
+             Sports betting guide:
+            </b>
+           </a>
+           All you need to know about placing a sports bet in Las Vegas.
+          </li>
+          <li>
+           <a href="/gaming/futures/index.html">
+            <b>
+             Futures:
+            </b>
+           </a>
+           Advanced odds for major events.
+          </li>
+         </ul>
+        </div>
+        <div style="overflow: hidden;">
+         <div style="width: 66%; float: left; opacity: 1;">
+         </div>
+         <div style="width: 32%; float: right; opacity: 1;">
+         </div>
+        </div>
+       </div>
+       <div class="bumper bumper-left">
+        <div class="bumper-content" id="bumperLeftContent">
+        </div>
+       </div>
+       <div class="bumper bumper-right">
+        <div class="bumper-content" id="bumperRightContent">
+         <div id="gptAd160a" class="gpt-ad-frame ad-col-c">
+         </div>
+         <div id="gptAd160b" class="gpt-ad-frame ad-col-c">
+         </div>
+         <div id="gptAd160c" class="gpt-ad-frame ad-col-c">
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="bumper bumper-bottom">
+    <div class="bumper-content" id="bumperBottomContent">
+    </div>
+   </div>
+  </div>
+  <!-- /body -->
+  <!-- footer -->
+  <div sizcache="0" sizset="0">
+   <div id="footer" data-category="FooterNav" data-track="click" data-type="FooterNav" class="container-fluid">
+    <div class="row paint-barfly-oxygen-tank box">
+     <div class="container padding-top-3 padding-bottom-3">
+      <div class="col-lg-12 col-xs-24">
+       <h3 class="footer-email-heading">
+        Sign up to receive exclusive VEGAS.com Deals
+       </h3>
+      </div>
+      <div id="footer-email-signup" class="col-lg-12 col-sm-11 col-xs-24 text-nowrap">
+       <div class="footer-email-signup-form-box" data-fed-plugin="emailsignup">
+        <div id="footerIframePlaceholder">
+        </div>
+        <div id="footer-error">
+         <div class="arrow-up">
+         </div>
+         <div id="footer-error-message">
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="row paint-night-dress-oxygen-tank box">
+     <div id="footerAd" class="container padding-1 text-center">
+     </div>
+     <div class="container padding-1">
+      <div class="col-lg-6 col-sm-8 col-xs-24 text-center">
+       <div class="brand-logo">
+        <a href="/">
+         <img src="/images/logoVtGradientLight.gif" width="180" />
+        </a>
+        <p class="text-bold text-h5 margin-top-1 margin-bottom-1">
+         1-866-983-4279
+        </p>
+       </div>
+      </div>
+      <div class="col-lg-5 col-sm-16 col-xs-24 after-brand-border footer-about-links">
+       <h3 class="footer-heading hidden-sm">
+        About VEGAS.com
+       </h3>
+       <ul class="list-group">
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/about/index.html">
+          About us
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/affiliates/">
+          Become an affiliate
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/about/advertise/index.html">
+          Advertise with us
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/about/contactus/index.html">
+          Contact us
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/about/jobs/index.html">
+          Employment
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/about/termsofuse.html">
+          Terms of use
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/about/privacy.html">
+          Privacy and security
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/sitemap_home.html">
+          Site map
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/about/sitefeedback/index.html">
+          Site feedback
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="col-lg-8 hidden-sm">
+       <h3 class="footer-heading">
+        Book at VEGAS.com
+       </h3>
+       <ul class="list-group col-lg-12 row">
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/resorts/index.html">
+          Las Vegas hotels
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/shows/index.html">
+          Las Vegas show tickets
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/tours/index.html">
+          Las Vegas tours
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/nightlife/index.html">
+          Las Vegas nightlife
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/restaurant/index.html">
+          Las Vegas restaurants
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/golf/index.html">
+          Las Vegas golf
+         </a>
+        </li>
+       </ul>
+       <ul class="list-group col-lg-12">
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/weddings/index.html">
+          Las Vegas weddings
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/spas/index.html">
+          Las Vegas spas
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/attractions/index.html">
+          Attractions
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://www.vegas.com/traveltips/index.html">
+          Vegas guide
+         </a>
+        </li>
+        <li class="list-group-item-plain">
+         <a data-label="{{innerText}}" href="http://blog.vegas.com">
+          Las Vegas blogs
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="list-group section-social">
+       <h3 class="footer-heading col-sm-6">
+        Follow US
+       </h3>
+       <a class="list-group-item-plain col-sm-3" target="_blank" href="http://www.facebook.com/vegas">
+        <span class="ref ref-facebook">
+        </span>
+       </a>
+       <a class="list-group-item-plain col-sm-3" target="_blank" href="http://www.twitter.com/vegascom">
+        <span class="ref ref-twitter">
+        </span>
+       </a>
+       <a class="list-group-item-plain col-sm-3" target="_blank" href="http://pinterest.com/vegascom/">
+        <span class="ref ref-pinterest">
+        </span>
+       </a>
+       <a class="list-group-item-plain col-sm-3" target="_blank" href="https://plus.google.com/b/103289362648931036069/103289362648931036069">
+        <span class="ref ref-google-plus">
+        </span>
+       </a>
+       <a class="list-group-item-plain col-sm-3" target="_blank" href="http://instagram.com/vegascom">
+        <span class="ref ref-instagram">
+        </span>
+       </a>
+      </div>
+      <div class="col-lg-offset-6 col-lg-18 col-sm-24 clear col-sm-offset-0 section-footer-secure">
+       <h3 class="col-lg-10 col-sm-10 col-xs-24 footer-heading text-nowrap text-center ref ref-lock-after ref-spacing">
+        Secure online payment system
+       </h3>
+       <div class="col-lg-14 col-sm-14 hidden-xs">
+        <div class="text-nowrap">
+         <img class="footer-cc-accepted" src="/images/VDCPaymentIconsBlock.png" alt="Visa, Mastercard, American Express, Discover, Diners Club International, JCB, Visa Checkout, PayPal" height="23" width="299" />
+         <a href="http://www.discoveramerica.com/">
+          <img class="margin-left-1" alt="Brand Usa Logo" src="/images/brandUSAHorizLogo.png" border="0" height="23" width="100" />
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="footer-extra-links col-lg-24 clear padding-top-3 hidden-xs">
+       <div class="footer-partner-links text-center">
+        <span>
+         Partner Sites:
+        </span>
+        <a data-label="{{innerText}}" href="http://www.lasvegassun.com/">
+         Las Vegas SUN
+        </a>
+        <a data-label="{{innerText}}" href="http://www.lasvegasweekly.com">
+         Las Vegas Weekly
+        </a>
+        <a data-label="{{innerText}}" href="http://mobile.vegas.com">
+         Mobile.Vegas.com
+        </a>
+        <a data-label="{{innerText}}" href="http://www.lasvegassun.com">
+         Las Vegas News
+        </a>
+        <a data-label="{{innerText}}" href="http://www.lasvegasmagazine.com">
+         Las Vegas Magazine
+        </a>
+        <a data-label="{{innerText}}" href="http://www.vegasdeluxe.com/">
+         Vegas Deluxe
+        </a>
+        <a data-label="{{innerText}}" href="http://www.vegasmagazine.com/">
+         VEGAS Magazine
+        </a>
+        <span id="brand-copyright">
+         &copy;
+         <span id="cylFooterCopyright">
+         </span>
+         VEGAS.COM
+        </span>
+       </div>
+       <script id="rxFooterPartnerLinks" type="text/javascript">
+        cyljq(function(jq){
+				    	jq('#cylFooterCopyright').text(new Date().getFullYear());
+				    });
+       </script>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- /footer -->
+ </body>
+</html>
