@@ -49,6 +49,8 @@ class Scraper():
 			print 'SPREADS NOT FOUND'
 			return None
 		else:
+			#print 'spread 1: ' + str(spreads[0])
+			#print 'spread 1: ' + str(spreads[1])
 			print 'spread 1: ' + spreads[0].text
 			print 'spread 1: ' + spreads[1].text
 		
@@ -64,13 +66,13 @@ class Scraper():
 			print 'Team 2: ' + names[1].text
 			
 		# Validate teams
-		if not self.CheckTeam(spreads[0], spreads[1]): # TODO change this to return a tuple for team 1 and 2
-			return None
+		#if not self.CheckTeam(spreads[0], spreads[1]): # TODO change this to return a tuple for team 1 and 2
+			#return None
 			
 		# Check if this line has already been scraped. If not, create a new line
-		if not self.CheckLine(names[0], names[1]) and not self.CheckTeam(spreads[0], spreads[1]):
-			b = BettingLine('', '', '', '')
-			return b
+		#if not self.CheckLine(names[0], names[1]) and not self.CheckTeam(spreads[0], spreads[1]):
+			#b = BettingLine('', '', '', '')
+			#return b
 		
 	def CheckTeam(self, teamName):
 		retrun (teamName in self.teams)
@@ -87,4 +89,4 @@ class Scraper():
 		open(location, 'w').write(str(text))
 		
 sraper = Scraper()
-#sraper.Run()
+sraper.Run()

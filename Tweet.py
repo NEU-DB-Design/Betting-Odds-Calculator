@@ -7,4 +7,5 @@ class Tweet():
 		self.date_posted = date_posted
 	
 	content = u''
+	
 	date_posted = ''
