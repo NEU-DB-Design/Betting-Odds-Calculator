@@ -10,10 +10,10 @@ class Scraper():
 	def __init__(self):
 		t = Team.blankTeam()
 		self.teams = ['x', 'a', 'b']
-		if 'xsdf' in self.teams:
-			print 'found'
-		else:
-			print 'nope'
+		#if 'xsdf' in self.teams:
+			#print 'found'
+		#else:
+			#print 'nope'
 		#self.teamList = [
 	
 	#teams 
@@ -44,7 +44,11 @@ class Scraper():
 		# Find spreads
 		spreads = section.findAll('a', 'lineOdd')
 		if not spreads:
-			spreads = section.find('div', 'line-normal').find('span', 'disabled')
+			try:
+				spreads = section.find('div', 'line-normal').find('span', 'disabled')
+			except Exception, e: #If no line-normal found then this bet is 'suspended'
+				print 'Parse Error: ' + str(e)
+				return
 		if not spreads or len(spreads) < 2:
 			print 'SPREADS NOT FOUND'
 			return None
@@ -68,11 +72,6 @@ class Scraper():
 		# Validate teams
 		#if not self.CheckTeam(spreads[0], spreads[1]): # TODO change this to return a tuple for team 1 and 2
 			#return None
-			
-		# Check if this line has already been scraped. If not, create a new line
-		#if not self.CheckLine(names[0], names[1]) and not self.CheckTeam(spreads[0], spreads[1]):
-			#b = BettingLine('', '', '', '')
-			#return b
 		
 	def CheckTeam(self, teamName):
 		retrun (teamName in self.teams)
