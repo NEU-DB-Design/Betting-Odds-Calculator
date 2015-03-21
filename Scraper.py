@@ -40,6 +40,7 @@ class Scraper():
 		t = Team.blankTeam()
 	
 		self.Dump(section, 'indiv')
+		##
 
 		# Find spreads
 		spreads = section.findAll('a', 'lineOdd')
