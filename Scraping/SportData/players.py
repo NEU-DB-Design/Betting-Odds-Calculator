@@ -23,6 +23,3 @@ try:
           cursor.execute(add_player, data)
 except URLError, e:
     print 'error:', e
-
-
-
