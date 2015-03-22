@@ -14,6 +14,15 @@ class ScheduleScraper():
 
 	url = 'http://api.sportsdatallc.org/nba-t3/games/2014/REG/schedule.json?api_key=3m8xndzddcvjc9wahux5wvye'
 	
+	def __init__(self):
+		self.LoadCaches()
+	
+	def LoadCaches(self):
+		## query all teams
+		## create dict by location + name string (id is content)
+		self.teamCache = {'San Antonio Spurs' : 1 }
+		pass
+	
 	def Dump(self, txt):
 		open('xmldump.txt', 'w').write(txt)
 	
@@ -35,10 +44,16 @@ class ScheduleScraper():
 		awayalias = game1['home']['alias']
 		awayid = game1['home']['id']
 		
+		home_id = self.CheckTeam(homename)
+		away_id = self.CheckTeam(awayname)
+		
+		if not home_id or not away_id:
+			print 'Invalid team'
+			return
+		
 		id = game1['id']
 		venue = game1['venue']['city'] + ' ' + game1['venue']['name']
 		date = game1['scheduled']
-		
 		
 		print id
 		print venue
@@ -49,6 +64,12 @@ class ScheduleScraper():
 		
 		print awayname
 		return True
+	
+	def CheckTeam(self, team):
+		if team in self.teamCache:
+			return self.teamCache[team]
+		else:
+			return None
 		
 sc = ScheduleScraper()
 sc.Run()
