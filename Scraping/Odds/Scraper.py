@@ -46,15 +46,18 @@ class Scraper():
 				if not lst: # If the list is null, this is the first date and we haven't found any odds yet.
 					lst = []
 				else: # If not save the date and game odds.
-					print 'h2'
 					all.append((dt, lst))
 			else: # Parse individual odds data sections here.
-				lst.append(dv)
+				section = None
+				if cnt == u'event left even' or cnt == u'event left odd':
+					section = self.ParseSection(dv)
+				if not not section:
+					lst.append(dv)
 		if not not lst:
 			all.append((dt, lst))
 			print 'h2 2nd'
-			print dt
-			print '----------\n' + str(lst)
+			#print dt
+			#print '----------\n' + str(lst)
 		#print all[0]
 		return 
 
@@ -80,7 +83,7 @@ class Scraper():
 				return
 		if not spreads or len(spreads) < 2:
 			print 'SPREADS NOT FOUND'
-			return None
+			#return None
 		else:
 			print 'spread 1: ' + spreads[0].text
 			print 'spread 1: ' + spreads[1].text
@@ -97,6 +100,8 @@ class Scraper():
 		print 'Team 2: ' + names[1].text
 		t1 = names[0].text
 		t2 = names[1].text
+		
+		return t1, t2
 		
 		t1_id = self.CheckTeam(t1)
 		t2_id = self.CheckTeam(t2)
