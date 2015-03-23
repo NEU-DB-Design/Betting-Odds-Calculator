@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import requests
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 import unicodedata
 
 class Scraper():
@@ -40,7 +40,7 @@ class Scraper():
 		scheduleContainer = soup.find('div', id='event-schedule')
 		
 		for dv in scheduleContainer.findAll('div', recursive=False):
-			nm, cnt = dv.attrs[0]
+			cnt = ' '.join(dv.attrs['class'])
 			if cnt == u'schedule-date':
 				dt = '------------------DATE--------------'
 				if not lst: # If the list is null, this is the first date and we haven't found any odds yet.
@@ -55,10 +55,6 @@ class Scraper():
 					lst.append(dv)
 		if not not lst:
 			all.append((dt, lst))
-			print 'h2 2nd'
-			#print dt
-			#print '----------\n' + str(lst)
-		#print all[0]
 		return 
 
 		divs = soup.findAll('div', 'event left even')
