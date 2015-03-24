@@ -15,7 +15,7 @@ class ScheduleScraper():
 	'''
 	
 	sqlString = 'SELECT ID, Name, Location FROM Team'
-	instStr = 'INSERT INTO Game (team1_id, team2_id, date) VALUES (%s, %s, %s);'
+	instStr = 'INSERT INTO Game (team1_id, team2_id, date) VALUES (%s, %s, DATE_SUB(%s, INTERVAL 4 HOUR));'
 	url = 'http://api.sportsdatallc.org/nba-t3/games/2014/REG/schedule.json?api_key=3m8xndzddcvjc9wahux5wvye'
 
 	def __init__(self):
