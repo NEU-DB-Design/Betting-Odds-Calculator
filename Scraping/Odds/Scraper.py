@@ -7,43 +7,31 @@ import string
 import datetime 
 from Models import BettingLine, Date
 
+'''
+	Scraper Class:
+		1) Make a request to bovada's NBA betting lines page.
+		2) Iterate through each div in the 'event-schedule' div
+		3) Divs that contain Betting Line data are assigned the date
+		   of whatever 'schedule-date' div came before it
+		4) Divs that contain data must find matches in 2 differet caches:
+		   i)  The team dictionary. This dict matches team names in the form
+		       of "location name" to the ID column of the Team Table. For
+		       example, the key 'Santonio Spurs' would yield the value 27
+		   ii) The game dictionary. This dict takes keys of the following
+		       format: {team1_id}_{team2_id}_{date} and returns the ID column
+		       of the game row.
+	Notes:
+		The 'top' team on Bovada always corresponds to the team
+		pointed to in the 'team1_id' field in the Betting_Line table.
+		In the event that the teams are backwards, the gameCache dict
+		returns a (gameID, True) tuple, so we know to switch the moneylines
+		and flip the sine of the spread.
+'''
 class Scraper():
 
 	url = 'http://sports.bovada.lv/sports-betting/nba-basketball-lines.jsp'
 	sqlStr = 'SELECT Name, Location FROM Game'
 	sqlString = 'SELECT ID, Name, Location FROM Team'
-	# TODO may be easier to just load a dictionary of games for today/tomorrow
-	str1 = '''
-		SELECT id, team1_id, team2_id, DATE(date) FROM `Game` 
-		WHERE 
-			DATE(date) = DATE(NOW()) OR DATE(date) = DATE_ADD(DATE(NOW()), INTERVAL 1 DAY);
-
-		'''
-	newstr = '''
-			SELECT id, team1_id, team2_id, date 
-			FROM Game
-			WHERE MONTH(DATE) = %s
-				AND (DAY(DATE) = %s OR DAY(DATE) = DATE_ADD(%s, INTERVAL 1 DAY))
-				AND YEAR(DATE) = %s
-			LIMIT 1'''
-
-	qryStr = '''
-			SELECT Id
-			FROM Game
-			WHERE MONTH(DATE) = %s
-			AND DAY(DATE) = %s
-			AND YEAR(DATE) = %s
-			AND (
-				(
-				team1_id = %s
-				AND team2_id = %s
-			)
-			OR (
-				team2_id = %s
-				AND team1_id = %s
-			)
-			)
-			LIMIT 1'''
 	months = {
 		'January': 1,
 		'February': 2,
@@ -63,7 +51,7 @@ class Scraper():
 		self.LoadCaches()
 		self.LoadGameCache()
 	
-	def Run(self):
+	def Run(self, debug):
 		r = requests.get(self.url)
 		soup = BeautifulSoup(r.text)
 
@@ -82,9 +70,9 @@ class Scraper():
 				# try parsing these sections
 				section = None
 				if cnt == u'event left even' or cnt == u'event left odd':
-					section = self.ParseSection(dv, dt)
+					section = self.ParseSection(dv, dt, debug)
 				if not not section:
-					lst.append(section) # Add to DB here
+					lst.append(section)
 		print len(lst)
 	
 
@@ -107,42 +95,37 @@ class Scraper():
 	
 
 	def ParseSpread(self, spread):
-		spread = spread.strip()
+
+		spread = spread.strip() # Strip whitespace
 		spr = None
 		
-		for i, ch in enumerate(spread):
-			if ch == u'½':
-				spr = int(spread[0:i])
+		for i, ch in enumerate(spread): 
+			if ch == u'½': # If there is a fraction 
+				spr = float(spread[0:i])
 				if spread[0] == u'-':
 					spr -= 0.5
 				else:
 					spr += 0.5
 				break
 			elif ch == u'(':
-				spr = int(spread[0:i])
+				spr = float(spread[0:i])
 				break
 		if not spr:
-			spr = int(spread)
+			spr = float(spread)
 
 		return spr
 
 		
-	def ParseSection(self, section, date):
-		# Find spreads
-
-		#spreads = section.findAll('a', 'lineOdd')
+	def ParseSection(self, section, date, debug):
 		spreads = section.find('a', 'lineOdd')
 		if not spreads:
-			#print 'not spreads'
 			try:
-				#spreads = section.find('div', 'line-normal').find('span', 'disabled')
 				spreads = section.find('div', 'line-normal').find('span')
-				#print 'SPREAD 1  ' +  spr 
 			except Exception, e: #If no line-normal found then this bet is 'suspended'
-				print 'Parse Error: ' + str(e)
+				print 'Suspended Bet.'
 				return None
 
-		if not spreads :
+		if not spreads:
 			return None
 
 		ml1, ml2 = None, None
@@ -153,14 +136,16 @@ class Scraper():
 		except Exception, e:	
 			print 'MoneyLine Error:  ' + str(e)
 
+		'''
 		if not not ml1 and not not ml2:
 			print 'ML 1: ' + str(ml1)
 			print 'ML 2: ' + str(ml2)
 		
 
 		print 'spread 1: ' + spreads.text
-		ps = self.ParseSpread(spreads.text)
 		print 'parsed spread: ' + str(ps)
+		'''
+		ps = self.ParseSpread(spreads.text)
 
 		# Find names
 		names = section.findAll('a', 'competitor left')
@@ -169,9 +154,8 @@ class Scraper():
 		if not names or len(names) < 2:
 			print 'NAMES NOT FOUND.'
 			return None
-		#else:
-		print 'Team 1: ' + names[0].text
-		print 'Team 2: ' + names[1].text
+		#print 'Team 1: ' + names[0].text
+		#print 'Team 2: ' + names[1].text
 
 		t1 = names[0].text
 		t2 = names[1].text
@@ -184,19 +168,24 @@ class Scraper():
 			return None
 
 		#print 'FOUND!!!!!!'
-		game_id = self.FindGame(t1_id, t2_id, date)
+		game_id, switched  = self.FindGame(t1_id, t2_id, date)
+		
+		if switched:
+			ml1, ml2 = ml2, ml1
+			ps *= -1
+
+		print ps
+		print ml1
+		print ml2
 
 		# spread and ML are null fo rnow
 		if not game_id:
 			return None
-		self.SaveLine(game_id, ml1, ml2, ps)
+
+		if not debug:
+			self.SaveLine(game_id, ml1, ml2, ps)
 
 	def SaveLine(self, game_id, m1, m2, spread):
-		print 'Attempting save...'
-		print 'spread to check: ' + str(spread)
-		print m1
-		print m2
-		print game_id
 		if not spread:
 			print 'spread is null indeed!!'
 		try:
@@ -234,9 +223,9 @@ class Scraper():
 			key2 = str(team2id) + '_' + str(team1id) + '_' + str(date)
 			#print 'key to check: ' + key 
 			if not key in self.gameCache:
-				self.gameCache[key] = _id
+				self.gameCache[key] = _id, False
 			if not key2 in self.gameCache:
-				self.gameCache[key2] = _id
+				self.gameCache[key2] = _id, True
 
 	def FindGame(self, id1, id2, date):
 		key = str(id1) + '_' + str(id2) + '_' + str(date)
@@ -248,16 +237,6 @@ class Scraper():
 			print 'no juice\n'
 			return None
 
-	def SearchGame(self, id1, id2, date):
-		cnx, cursor = self.GetCursor()
-		cursor.execute(self.qryStr, (date.month, date.day, date.year, id1, id2, id1, id2))
-		if cursor.rowcount > 0:
-			(val,) = cursor.fetchall()[0] # 1 elemetn tuple. Stupid.
-			return val
-		else:
-			return None
-		
-	
 	def CheckTeam(self, team):
 		t = team.encode('utf8').lower()
 		if t.lower() in self.team_ID_Cache:
@@ -275,5 +254,5 @@ class Scraper():
 		
 sraper = Scraper()
 #print 'RES:  ' + str(sraper.ParseSpread(u'+10'))
-sraper.Run()
+sraper.Run(False)
 
