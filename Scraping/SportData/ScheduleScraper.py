@@ -15,7 +15,7 @@ class ScheduleScraper():
 	'''
 	
 	sqlString = 'SELECT ID, Name, Location FROM Team'
-	instStr = 'INSERT INTO Game (team1_id, team2_id, date) VALUES (%s, %s, DATE_SUB(%s, INTERVAL 4 HOUR));'
+	instStr = 'INSERT INTO Game (result_id, team1_id, team2_id, date) VALUES (%s, %s, %s, DATE_SUB(%s, INTERVAL 4 HOUR));'
 	url = 'http://api.sportsdatallc.org/nba-t3/games/2014/REG/schedule.json?api_key=3m8xndzddcvjc9wahux5wvye'
 
 	def __init__(self):
@@ -48,16 +48,18 @@ class ScheduleScraper():
 			# away team
 			awayname = game1['away']['name']
 			away_id = self.CheckTeam(awayname)
+
 			
 			if not home_id or not away_id:
 				print 'Invalid team'
 				continue
 
 			date = game1['scheduled']
+			res_id = game1['id']
 			
-			if not date:
+			if date is None or id is None:
 				continue
-			data = (home_id, away_id, date)
+			data = (res_id, home_id, away_id, date)
 
 			cnx, cursor = self.GetCursor()
 			cursor.execute(self.instStr, data)
