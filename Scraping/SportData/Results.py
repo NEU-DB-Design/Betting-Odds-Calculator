@@ -85,14 +85,5 @@ class Results():
 			print 'SQL Error:  ' + str(e)
 		self.cnx.commit()
 		
-		
-#cnx = MySQLdb.connect(host='', port=3306, passwd='gamera@1234', user='bets', db='bets')
-
-#print NicknameCache(cnx).Has('Knicks')
-#print NicknameCache(cnx).cache
 r = Results()
 r.Update()
-
-#r2 = requests.get('http://api.sportsdatallc.org/nba-t3/games/59851bd6-b391-4f62-8aaf-ecb46ca9f5d9/boxscore.json?api_key=3m8xndzddcvjc9wahux5wvye')
-
-#print r2.text
