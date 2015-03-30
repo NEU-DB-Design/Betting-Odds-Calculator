@@ -5,7 +5,7 @@ import unicodedata
 import MySQLdb
 import string
 import datetime 
-from Models import BettingLine, Date
+from Cache import GameCache
 
 '''
 	Scraper Class:
@@ -50,6 +50,8 @@ class Scraper():
 	def __init__(self):
 		self.LoadCaches()
 		self.LoadGameCache()
+		self.cnx, self.cursor = self.GetCursor()
+		self.gameIDCache = GameCache(self.cnx)
 	
 	def Run(self, debug):
 		r = requests.get(self.url)
@@ -168,7 +170,12 @@ class Scraper():
 			return None
 
 		#print 'FOUND!!!!!!'
-		game_id, switched  = self.FindGame(t1_id, t2_id, date)
+		#game_id, switched  = self.FindGame(t1_id, t2_id, date)
+
+		key = str(t1_id) + '_' + str(t2_id) + '_' + str(date)
+		if not key in self.gameCache:
+			return 
+		game_id, switched  = self.gameCache[key]
 		
 		if switched:
 			ml1, ml2 = ml2, ml1
@@ -177,6 +184,7 @@ class Scraper():
 		print ps
 		print ml1
 		print ml2
+
 
 		# spread and ML are null fo rnow
 		if not game_id:
@@ -252,6 +260,7 @@ class Scraper():
 	def Dump(self, text, location):
 		open(location, 'w').write(str(text))
 
+'''
 class CacheBase():
 	
 	def __init__(self, cnx):
@@ -290,16 +299,16 @@ class GameCache(CacheBase):
 				self.cache[key] = _id, False
 			if not key2 in self.cache:
 				self.cache[key2] = _id, True
+'''
 
 
 cnx = MySQLdb.connect(host='', port=3306, passwd='gamera@1234',
 				user='bets', db='bets')
 	
-gc = GameCache(cnx)
-print gc.cache
-print ('1_17_2015-03-30' in gc)
-print gc['1_17_2015-03-30']
-#sraper = Scraper()
-#print 'RES:  ' + str(sraper.ParseSpread(u'+10'))
-#sraper.Run(False)
+#gc = GameCache(cnx)
+#print gc.cache
+#print ('1_17_2015-03-30' in gc)
+#print gc['1_17_2015-03-30']
+sraper = Scraper()
+sraper.Run(False)
 
