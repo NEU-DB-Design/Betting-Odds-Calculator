@@ -251,8 +251,55 @@ class Scraper():
 		
 	def Dump(self, text, location):
 		open(location, 'w').write(str(text))
+
+class CacheBase():
+	
+	def __init__(self, cnx):
+		self.cnx = cnx
+		self.cursor = cnx.cursor()
+		self.cache = {}
+		self._load()
+
+	def _load(self):
+		return 0
+
+	def __contains__(self, key):
+		return key.lower() in self.cache
+
+	def __getitem__(self, key):
+		try:
+			return self.cache[key.lower()]
+		except:
+			print 'Invalid key!'
+
+class GameCache(CacheBase):
+	def _load(self):
+		# Init cache
+		#self.cache = {}
+
+		# Call proc
+		#cnx, cursor = self.GetCursor()
+		self.cursor.callproc('GetGameKeys')
 		
-sraper = Scraper()
+		# Create a key for each team
+		for _id, team1id, team2id, date in self.cursor.fetchall():
+			key = str(team1id) + '_' + str(team2id) + '_' + str(date)
+			key2 = str(team2id) + '_' + str(team1id) + '_' + str(date)
+			#print 'key to check: ' + key 
+			if not key in self.cache:
+				self.cache[key] = _id, False
+			if not key2 in self.cache:
+				self.cache[key2] = _id, True
+
+
+cnx = MySQLdb.connect(host='', port=3306, passwd='gamera@1234',
+				user='bets', db='bets')
+	
+gc = GameCache(cnx)
+print gc.cache
+print ('1_17_2015-03-30' in gc)
+print gc['1_17_2015-03-30']
+#sraper = Scraper()
 #print 'RES:  ' + str(sraper.ParseSpread(u'+10'))
-sraper.Run(False)
+#sraper.Run(False)
 
