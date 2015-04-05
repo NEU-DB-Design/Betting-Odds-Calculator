@@ -7,12 +7,16 @@ from Cache import NicknameCache
 
 '''
 	Results Class:
-		Adds a result row for any games in Game that have been played.
+		Adds Results for all games from the previous day.
+		1) Queries all games from the previous day that do not have corresponding entries
+		   in rows.
+		2) For each result_id ID returned (this corresponds specifically to the SportsData API)
+		   make a request to SportsData API for this results Game Box score
+		3) 
 '''
 class Results():
 	
 	url = 'http://api.sportsdatallc.org/nba-t3/games/%s/boxscore.json?api_key=3m8xndzddcvjc9wahux5wvye'
-	#load_= 'SELECT result_id FROM Game WHERE date = DATE(NOW()'
 
 	def __init__(self):
 		self.cnx = MySQLdb.connect(host='', port=3306, passwd='gamera@1234', 
@@ -33,7 +37,7 @@ class Results():
 		self.cursor.callproc('getYesterdaysGames')
 		games = self.cursor.fetchall()
 		for res_id, t1_id, game_id in games:
-			#print res_id
+			print res_id
 			self.UpdateGame(res_id, t1_id, game_id)
 			sleep(1)
 	
@@ -59,14 +63,14 @@ class Results():
 		print away
 		print score_2
 		
-		if not self.nicknameCache.Has(home):
+		if home in self.nicknameCache:
 			print 'cache miss HOME'
 
-		if not self.nicknameCache.Has(away):
+		if away in self.nicknameCache:
 			print 'cache miss AWAY'
 			
-		t1_id = self.nicknameCache.Get(home)
-		t2_id = self.nicknameCache.Get(away)
+		t1_id = home in self.nicknameCache
+		t2_id = away in self.nicknameCache
 
 		# Swap score1 & score2 if SportsData API representation is backwards
 		if not team1_id == t1_id:

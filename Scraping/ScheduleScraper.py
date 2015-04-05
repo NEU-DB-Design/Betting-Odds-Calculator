@@ -14,7 +14,7 @@ class ScheduleScraper():
 		WHERE CONCAT( Location,  ' ', Name ) =  'Boston Celtics'
 	'''
 	
-	sqlString = 'SELECT ID, Name, Location FROM Team'
+	sqlString = 'SELECT ID, Nickname, Location FROM Team'
 	instStr = 'INSERT INTO Game (result_id, team1_id, team2_id, date) VALUES (%s, %s, %s, DATE_SUB(%s, INTERVAL 4 HOUR));'
 	url = 'http://api.sportsdatallc.org/nba-t3/games/2014/REG/schedule.json?api_key=3m8xndzddcvjc9wahux5wvye'
 
