@@ -6,13 +6,13 @@ SELECT g.id, bl.date_recorded, t1.name, t2.name, bl.spread, bl.ML_1, bl.ML_2 FRO
     WHERE WEEK(bl.date_recorded) = WEEK(DATE(NOW()));
 
 -- Find all games for this week
-SELECT g.id, g.date, t1.name, t2.name FROM Game AS g
+SELECT g.id, g.date, t1.Nickname, t2.Nickname FROM Game AS g
     JOIN Team as t1 ON t1.ID=g.team1_id
 	JOIN Team as t2 ON t2.ID=g.team2_id
     WHERE WEEK(DATE(NOW()))=WEEK(g.date);
     
 -- Find all games where underdog betters won
-SELECT g.id, t1.name, t2.name, r.score_1, r.score_2, ABS(r.score_1 - r.score_2), bl.spread FROM Game as g
+SELECT g.id, t1.Nickname, t2.Nickname, r.score_1, r.score_2, ABS(r.score_1 - r.score_2), bl.spread FROM Game as g
 	JOIN Result as r ON r.game_id=g.ID
     JOIN Team as t1 ON t1.ID=g.team1_id
     JOIN Team as t2 ON t2.ID=g.team2_id
@@ -20,7 +20,7 @@ SELECT g.id, t1.name, t2.name, r.score_1, r.score_2, ABS(r.score_1 - r.score_2),
 		WHERE bl.spread < ABS(GREATEST(r.score_1, r.score_2) - LEAST(r.score_1, r.score_2));
         
 -- Find 5 highest spreads this week
-SELECT g.id, t1.name, t2.name, bl.spread FROM Game as g
+SELECT g.id, t1.Nickname, t2.Nickname, bl.spread FROM Game as g
     JOIN Team as t1 ON t1.ID=g.team1_id
     JOIN Team as t2 ON t2.ID=g.team2_id
 	JOIN Betting_Line as bl ON bl.game_id=g.ID
@@ -29,7 +29,7 @@ SELECT g.id, t1.name, t2.name, bl.spread FROM Game as g
         LIMIT 5;
         
 -- Find 5 lowest spreads this week
-SELECT g.id, t1.name, t2.name, bl.spread FROM Game as g
+SELECT g.id, t1.Nickname, t2.Nickname, bl.spread FROM Game as g
     JOIN Team as t1 ON t1.ID=g.team1_id
     JOIN Team as t2 ON t2.ID=g.team2_id
 	JOIN Betting_Line as bl ON bl.game_id=g.ID
@@ -38,16 +38,16 @@ SELECT g.id, t1.name, t2.name, bl.spread FROM Game as g
         LIMIT 5;
 
 -- Find player with highest points per game on each team  
-SELECT Team.Name, Player.Name, MAX(Stats.PPG) FROM Stats
-	JOIN Player ON Player.playerID = Stats.playerID
-    JOIN Team ON Player.abbr = Team.abbr
-    GROUP BY Team.abbr;
+SELECT Team.Nickname, Player.Name, MAX(Points/Games) FROM Stats
+	JOIN Player ON Player.CBS_PlayerID = Stats.CBS_PlayerID
+    JOIN Team ON Player.CBS_TeamID = Team.CBS_TeamID
+    GROUP BY Team.CBS_TeamID;
     
 -- Find player with lowest points per game on each team  
-SELECT Team.Name, Player.Name, MIN(Stats.PPG) FROM Stats
-	JOIN Player ON Player.playerID = Stats.playerID
-    JOIN Team ON Player.abbr = Team.abbr
-    GROUP BY Team.abbr;
+SELECT Team.Nickname, Player.Name, MIN(Points/Games) FROM Stats
+	JOIN Player ON Player.CBS_PlayerID = Stats.CBS_PlayerID
+    JOIN Team ON Player.CBS_TeamID = Team.CBS_TeamID
+    GROUP BY Team.CBS_TeamID;
     
 -- Find player with highest Points Per Game
 SELECT Name, MAX(PPG) FROM Stats

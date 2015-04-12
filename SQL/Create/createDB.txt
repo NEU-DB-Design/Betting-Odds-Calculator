@@ -1,0 +1,21 @@
+
+INIT: Init node to 0, all other nodes to INF
+
+distance[i] (i is node index)
+
+1) Mark initial node as current. All other nodes unvisited. Create
+	set of these nodes
+	
+2)  For current node, calculate all distances of neighbor nodes to this
+	node. If any of these are less than the current, assign it.
+	
+3)  Mark current node visited and remove from unvisited set.
+
+4)  If dest node has been visited stop.
+
+5)  Otherwise, select the unvisited node that is marked with smallest
+	distance and set it as new current node.
+	
+Start Node Y:
+
+y x z w v u
