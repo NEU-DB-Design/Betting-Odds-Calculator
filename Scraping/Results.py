@@ -33,10 +33,17 @@ class Results():
 
 	
 	def Update(self):
-		
-		self.cursor.callproc('getYesterdaysGames')
+		#self.cursor.callproc('getYesterdaysGames')
+		self.cursor.callproc('getAllGames_UpTo_Today')
 		games = self.cursor.fetchall()
+		#print self.nicknameCache.cache
+		#return
+		count = 0
 		for res_id, t1_id, game_id in games:
+
+			print 'COUNT: ' + str(count) + ' out of: ' + str(len(games))
+			count += 1
+
 			print res_id
 			self.UpdateGame(res_id, t1_id, game_id)
 			sleep(1)
@@ -52,22 +59,30 @@ class Results():
 			print 'JSON Error:  ' + str(e) + '\n'
 			return
 		
-		score_1 = decoded['home']['points']
-		score_2 = decoded['away']['points']
+		try:
+			score_1 = decoded['home']['points']
+			score_2 = decoded['away']['points']
 		
-		home = decoded['home']['name']
-		away = decoded['away']['name']
+			home = decoded['home']['name']
+			away = decoded['away']['name']
+		except Exception, e:
+			err = 'JSON error:  ' + str(e) + '\n'
+			print err
+			self.Dump(err)
+			return
 
 		print home
 		print score_1
 		print away
 		print score_2
 		
-		if home in self.nicknameCache:
+		if not home in self.nicknameCache:
 			print 'cache miss HOME'
+			return
 
-		if away in self.nicknameCache:
+		if not away in self.nicknameCache:
 			print 'cache miss AWAY'
+			return
 			
 		t1_id = home in self.nicknameCache
 		t2_id = away in self.nicknameCache
@@ -76,7 +91,7 @@ class Results():
 		if not team1_id == t1_id:
 			score_1, score_2 = score_1, score_2
 
-		data = (score_1, score_2, score_1 > score_2, g_id)
+		data = (score_1, score_2, g_id)
 		print '\n'
 
 		self.AddResult(data)
@@ -88,6 +103,9 @@ class Results():
 		except Exception, e:
 			print 'SQL Error:  ' + str(e)
 		self.cnx.commit()
+
+	def Dump(self, data):
+		f = open('debug_dump.txt', 'a').write(data + '\n')
 		
 r = Results()
 r.Update()

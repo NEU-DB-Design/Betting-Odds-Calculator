@@ -30,8 +30,7 @@ from Cache import GameCache
 class Scraper():
 
 	url = 'http://sports.bovada.lv/sports-betting/nba-basketball-lines.jsp'
-	sqlStr = 'SELECT Name, Location FROM Game'
-	sqlString = 'SELECT ID, Name, Location FROM Team'
+	sqlString = 'SELECT ID, Nickname, Location FROM Team'
 	months = {
 		'January': 1,
 		'February': 2,
