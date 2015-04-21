@@ -47,8 +47,34 @@ class NicknameCache(CacheBase):
 
 		print '\nTeam id cache loaded.\n'
 
-#cnx = MySQLdb.connect(host='', port=3306, passwd='gamera@1234',
-					#user='bets', db='bets')
-#nc = NicknameCache(cnx)
-#print nc.Has('Knicks'.lower())
-#print nc.Get('Celtics'.lower())
+class GameCacheLong(CacheBase):
+	#sqlStr = 'SELECT ID, location, Nickname FROM Team'
+
+	def _load(self):
+		self.cache = {}
+		self.cursor.callproc('load_longformat_gameCache')
+
+		for date, loc1, n1, loc2, n2, _id in self.cursor.fetchall():
+			key1 = ' '.join([str(date), loc1, n1, loc2, n2])
+			key2 = ' '.join([str(date), loc2, n2, loc1, n1])
+
+			if not key1 in self.cache:
+				self.cache[key1] = _id, False
+			if not key2 in self.cache:
+				self.cache[key2] = _id, True
+
+		print '\nTeam id cache loaded.\n'
+
+
+cnx = MySQLdb.connect(host='', port=3306, passwd='gamera@1234',
+					user='bets', db='bets')
+nc = GameCacheLong(cnx)
+
+print nc.cache
+test = '2014-11-01 Atlant Hawks Indiana Pacers'
+print test in nc
+print nc[test]
+
+
+
+

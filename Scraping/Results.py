@@ -33,8 +33,9 @@ class Results():
 
 	
 	def Update(self):
-		#self.cursor.callproc('getYesterdaysGames')
-		self.cursor.callproc('getAllGames_UpTo_Today')
+		self.cursor.callproc('getYesterdaysGames')
+		#self.cursor.callproc('getAllGames_UpTo_Today')
+		print 'num gmes:  ' + str(len(games))
 		games = self.cursor.fetchall()
 		#print self.nicknameCache.cache
 		#return
