@@ -65,16 +65,29 @@ class GameCacheLong(CacheBase):
 
 		print '\nTeam id cache loaded.\n'
 
+class MLB_GameCache(CacheBase):
+	sqlStr = 'SELECT Name, ID FROM MLB_Team'
+	
+	def _load(self):
+		self.cache = {}
+		self.cursor.execute(self.sqlStr)
+		
+		for name, _id in self.cursor.fetchall():
+			if not name.lower() in self.cache:
+				self.cache[name.lower()] = _id
 
+
+'''
 cnx = MySQLdb.connect(host='', port=3306, passwd='gamera@1234',
 					user='bets', db='bets')
-nc = GameCacheLong(cnx)
+nc = MLB_GameCache(cnx)
 
 print nc.cache
-test = '2014-11-01 Atlant Hawks Indiana Pacers'
+#test = '2014-11-01 Atlant Hawks Indiana Pacers'
+test = 'pirates'
 print test in nc
 print nc[test]
 
 
 
-
+'''
