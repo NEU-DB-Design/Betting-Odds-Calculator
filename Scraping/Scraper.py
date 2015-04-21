@@ -158,8 +158,12 @@ class Scraper():
 		#print 'Team 1: ' + names[0].text
 		#print 'Team 2: ' + names[1].text
 
-		t1 = names[0].text
-		t2 = names[1].text
+		if names[0].text == None or names[1].text == None:
+			print 'No team name found.'
+			return
+
+		t1 = self.CleanTeamName(names[0].text)
+		t2 = self.CleanTeamName(names[1].text)
 
 		t1_id = self.CheckTeam(t1)
 		t2_id = self.CheckTeam(t2)
@@ -173,7 +177,9 @@ class Scraper():
 
 		key = str(t1_id) + '_' + str(t2_id) + '_' + str(date)
 		if not key in self.gameCache:
+			print 'game cache miss.'
 			return 
+
 		game_id, switched  = self.gameCache[key]
 		
 		if switched:
@@ -192,6 +198,11 @@ class Scraper():
 		if not debug:
 			self.SaveLine(game_id, ml1, ml2, ps)
 
+	def CleanTeamName(self, name):
+		for i, c in enumerate(name):
+			if c == '(':
+				return name[0:i-1]
+
 	def SaveLine(self, game_id, m1, m2, spread):
 		if not spread:
 			print 'spread is null indeed!!'
@@ -202,6 +213,8 @@ class Scraper():
 			cnx.commit()
 		except Exception, e:
 			print 'Save Error:  ' + str(e)
+		time = str(datetime.datetime.now())
+		open('spread_dump', 'a').write(time + ' Read Spread!\n')
 			
 	def LoadCaches(self):
 		self.team_ID_Cache = {}
@@ -245,7 +258,8 @@ class Scraper():
 			return None
 
 	def CheckTeam(self, team):
-		t = team.encode('utf8').lower()
+		#t = team.encode('utf8').lower()
+		t = team
 		if t.lower() in self.team_ID_Cache:
 			return self.team_ID_Cache[t.lower()]
 		else:
