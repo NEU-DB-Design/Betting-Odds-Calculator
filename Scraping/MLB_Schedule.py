@@ -11,7 +11,7 @@ headers = {'Authorization': 'Bearer afe75781-fd12-4a0a-ac3e-7c60abe05199'}
 
 class MLB_Schedule():
 
-	con, cursor = DB.GetCursor()
+	con, cursor = DB.GetCursor(local=True)
 	teamCache = Cache.MLB_TeamCache(con)
 	gameCache = Cache.MLB_GameCache(con)
 	dbg = ''
