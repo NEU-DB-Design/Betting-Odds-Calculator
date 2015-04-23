@@ -65,7 +65,7 @@ class GameCacheLong(CacheBase):
 
 		print '\nTeam id cache loaded.\n'
 
-class MLB_GameCache(CacheBase):
+class MLB_TeamCache(CacheBase):
 	sqlStr = 'SELECT Name, ID FROM MLB_Team'
 	
 	def _load(self):
@@ -75,6 +75,23 @@ class MLB_GameCache(CacheBase):
 		for name, _id in self.cursor.fetchall():
 			if not name.lower() in self.cache:
 				self.cache[name.lower()] = _id
+
+class MLB_GameCache(CacheBase):
+	sqlStr = 'SELECT Date, Team1_ID, Team2_ID, ID FROM MLB_Schedule' # change to left join.
+	str = 'SELECT Date, Team1, Team2, ID, (case when outcome_id is null then true else false end) FROM MLB_Schedule LEFT JOIN MLB_Outcome ON ID = GameID'
+	
+	def _load(self):
+		self.cache = {}
+		self.cursor.execute(self.sqlStr)
+		
+		for date, t1, t2, _id in self.cursor.fetchall():
+			key1 = ' '.join(str(date), t1, t2)
+			key2 = ' '.join(str(date), t2, t1)
+			if not key1.lower() in self.cache:
+				self.cache[key1.lower()] = _id, False
+			if not key2.lower() in self.cache:
+				self.cache[key2.lower()] = _id, False
+
 
 
 '''
