@@ -1,4 +1,5 @@
 import MySQLdb
+import DB
 
 class CacheBase():
 	
@@ -77,26 +78,26 @@ class MLB_TeamCache(CacheBase):
 				self.cache[name.lower()] = _id
 
 class MLB_GameCache(CacheBase):
-	sqlStr = 'SELECT Date, Team1_ID, Team2_ID, ID FROM MLB_Schedule' # change to left join.
-	str = 'SELECT Date, Team1, Team2, ID, (case when outcome_id is null then true else false end) FROM MLB_Schedule LEFT JOIN MLB_Outcome ON ID = GameID'
+	#sqlStr = 'SELECT Date, Team1_ID, Team2_ID, ID FROM MLB_Schedule' # change to left join.
+	sqlStr = 'SELECT sch.Date, sch.Team1_ID, sch.Team2_ID, sch.ID, sch.Result_ID FROM MLB_Schedule AS sch LEFT JOIN MLB_Outcome AS o ON sch.Result_ID = o.ID'
 	
 	def _load(self):
 		self.cache = {}
 		self.cursor.execute(self.sqlStr)
 		
-		for date, t1, t2, _id in self.cursor.fetchall():
+		for date, t1, t2, _id, res_id in self.cursor.fetchall():
 			key1 = ' '.join(str(date), t1, t2)
 			key2 = ' '.join(str(date), t2, t1)
 			if not key1.lower() in self.cache:
-				self.cache[key1.lower()] = _id, False
+				self.cache[key1.lower()] = _id, False, res_id
 			if not key2.lower() in self.cache:
-				self.cache[key2.lower()] = _id, False
+				self.cache[key2.lower()] = _id, False, res_id
 
 
 
 '''
-cnx = MySQLdb.connect(host='', port=3306, passwd='gamera@1234',
-					user='bets', db='bets')
+cnx, cur = DB.GetCursor(local=True)
+
 nc = MLB_GameCache(cnx)
 
 print nc.cache
@@ -104,7 +105,4 @@ print nc.cache
 test = 'pirates'
 print test in nc
 print nc[test]
-
-
-
 '''

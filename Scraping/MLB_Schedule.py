@@ -17,38 +17,57 @@ class MLB_Schedule():
 	dbg = ''
 
 	def Run(self):
-		r = requests.get(url, headers=headers)
-		#print r.text
 
+		# Make API request
+		r = requests.get(url, headers=headers)
+
+		# Attempt to parse JSON
 		try:
 			decoded = json.loads(r.text)
 		except:
 			print 'JSON error.'
 			return
-	
 		print 'JSON parsed succesfully.'
-		#print r.text
 	
+		# Iterate through each game entry in JSON
 		for d in decoded:
-			#print str(d) + '\n'
+
+			# Parse JSON fields for 1st team, 2nd team, date, and 
+			# game status
 			t1 = d['team']['last_name']
-			print t1
 			t2 = d['opponent']['last_name']
+			full = d['event_start_date_time']
+			completed = d['event_status']
+
+			# Init new MLB game object.
+			game = MLB_Game(t1, t2, full, completed)
+
+			# Validate/Populate team ID fields
+			if not game.ValidateTeams(self.teamCache):
+				print 'Team cache miss!'
+				continue
+			
+			# Check what we have for this game.
+			status = game.CheckStatus(self.gameCache)
+
+
+			
+
+			'''
+
+			print t1
 			print t2 
 	
 			if t1 in self.teamCache and t2 in self.teamCache:
 				t1_id = self.teamCache[t1]
 				t2_id = self.teamCache[t2]
 			else:
-				print 'Team cache miss!'
 				return
 
-			completed = d['event_status']
 			print completed + '\n'
 
 			#if completed == 'completed' and not comp
 	
-			full = d['event_start_date_time']
 
 			try:
 				yourdate = dateutil.parser.parse(full)		
@@ -89,8 +108,61 @@ class MLB_Schedule():
 			print full + '\n'
 			#print time 
 			#dt = datetime.strptime(date, 'yyyy-MM-ddTHH:mm:ss hh:mm')
+			'''
+
+class MLB_Game():
+
+	Team1 = ''
+	Team2 = ''
+	Date = None
+	IsComplete = False
+	t1_id = None
+	t2_id = None
+	
+	def __init__(self, t1, t2, d, ic):
+		self.Team1 = t1
+		self.Team2 = t2
+		self.Date = d
+		self.IsComplete = ic
 		
-		
+	def ValidateTeams(self, teamCache):
+		if self.Team1 in teamCache and self.Team1 in teamCache:
+			self.t1_id = teamCache[self.Team1]
+			self.t2_id = teamCache[self.Team2]
+			return True
+		else:
+			return False
+
+	##
+	## Returns:
+	## -1 -> No game or outcome
+	##  0 -> No outcome
+	##  1 -> Has both
+	##
+	def CheckStatus(self, gameCache):
+		gameKey1 = ' '.join([str(self.Date), str(self.t1_id), str(self.t2_id)])
+		gameKey2 = ' '.join([str(self.Date), str(self.t2_id), str(self.t1_id)])
+		need_to_switch, has_outcome = False, None
+
+		if gameKey1 in gameCache:
+			self.gameID, need_to_switch, has_outcome = gameCache[gameKey1]
+		elif gameKey2 in gameCache:
+			self.gameID, need_to_switch, has_outcome = gameCache[gameKey2]
+			self._SwitchTeams()
+		else:
+			return -1
+
+		if has_outcome == None:
+			return 1
+		else:
+			return 0
+
+
+	def _SwitchTeams(self):
+		self.t1_id, self.t2_id = self.t2_id, self.t1_id 
+
+
+	
 
 ms = MLB_Schedule()
 ms.Run()
