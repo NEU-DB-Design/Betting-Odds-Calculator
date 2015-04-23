@@ -133,9 +133,12 @@ class MLB_Game():
 	def __init__(self, t1, t2, d, ic):
 		self.Team1 = t1
 		self.Team2 = t2
-		self.Date = d
 		self.IsComplete = ic
-		
+		date = self._ParseDate(d)
+		if date == None:
+			return None
+		self.Date = date
+
 	def ValidateTeams(self, teamCache):
 		if self.Team1 in teamCache and self.Team1 in teamCache:
 			self.t1_id = teamCache[self.Team1]
@@ -171,6 +174,14 @@ class MLB_Game():
 
 	def _SwitchTeams(self):
 		self.t1_id, self.t2_id = self.t2_id, self.t1_id 
+
+	def _ParseDate(self, date):
+		try:
+			yourdate = dateutil.parser.parse(date)		
+		except Exception, e:
+			print 'Date parse error: ' + str(e)
+			None
+		return yourdate
 
 
 	
