@@ -86,8 +86,8 @@ class MLB_GameCache(CacheBase):
 		self.cursor.execute(self.sqlStr)
 		
 		for date, t1, t2, _id, res_id in self.cursor.fetchall():
-			key1 = ' '.join(str(date), t1, t2)
-			key2 = ' '.join(str(date), t2, t1)
+			key1 = ' '.join([str(date), str(t1), str(t2)])
+			key2 = ' '.join([str(date), str(t2), str(t1)])
 			if not key1.lower() in self.cache:
 				self.cache[key1.lower()] = _id, False, res_id
 			if not key2.lower() in self.cache:
@@ -95,7 +95,6 @@ class MLB_GameCache(CacheBase):
 
 
 
-'''
 cnx, cur = DB.GetCursor(local=True)
 
 nc = MLB_GameCache(cnx)
@@ -105,4 +104,3 @@ print nc.cache
 test = 'pirates'
 print test in nc
 print nc[test]
-'''

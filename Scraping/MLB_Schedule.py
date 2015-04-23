@@ -50,6 +50,17 @@ class MLB_Schedule():
 			# Check what we have for this game.
 			status = game.CheckStatus(self.gameCache)
 
+			# Depending on status, add rows to MLB_Schedule
+			# and/or MLB_Outcome
+			if status == 1: 
+				continue
+			elif status == -1:
+				self.Add_Sched()
+			elif status == -1 and completed == 'completed':
+				self.AddBoth()
+			elif status == 0:  
+				self.Add_Result()
+
 
 			
 
