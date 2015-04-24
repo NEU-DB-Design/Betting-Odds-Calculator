@@ -79,7 +79,7 @@ class MLB_TeamCache(CacheBase):
 
 class MLB_GameCache(CacheBase):
 	#sqlStr = 'SELECT Date, Team1_ID, Team2_ID, ID FROM MLB_Schedule' # change to left join.
-	sqlStr = 'SELECT sch.Date, sch.Team1_ID, sch.Team2_ID, sch.ID, sch.Result_ID FROM MLB_Schedule AS sch LEFT JOIN MLB_Outcome AS o ON sch.Result_ID = o.ID'
+	sqlStr = 'SELECT sch.Date, sch.Team1_ID, sch.Team2_ID, sch.ID, o.GameID FROM MLB_Schedule AS sch LEFT JOIN MLB_Outcome AS o ON sch.ID = o.GameID'
 	
 	def _load(self):
 		self.cache = {}

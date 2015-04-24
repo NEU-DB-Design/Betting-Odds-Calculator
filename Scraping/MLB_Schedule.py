@@ -28,6 +28,7 @@ class MLB_Schedule():
 
 		# Make API request
 		r = requests.get(url, headers=headers)
+		open('json_dump.txt', 'a').write(r.text)
 
 		# Attempt to parse JSON
 		try:
@@ -53,7 +54,7 @@ class MLB_Schedule():
 			t1_score, t2_score = None, None
 			if completed == 'completed':
 				t1_score = d['team_points_scored']
-				t2_score = d['opponent_events_lost']
+				t2_score = d['opponent_points_scored']
 				print t1_score
 				print t2_score
 				logging.debug(str(t1_score) + '\n' +str(t2_score) + '\n')
@@ -85,7 +86,7 @@ class MLB_Schedule():
 				self.Add_Schedule(game)
 				logging.debug('Adding schedule')
 			elif status == 0 and completed == 'completed':  
-				self.Add_Result('')
+				self.Add_Result(game, t1_score, t2_score)
 				logging.debug('ADDING RESULT!')
 			
 
@@ -96,13 +97,18 @@ class MLB_Schedule():
 		cursor.execute(sql, (game.t1_id, game.t2_id, game.Date, None))
 		con.commit()
 		print 'Just schedule!'
-		pass
+
 	def Add_Both(self, sched):
 		print 'Both!'
 		pass
-	def Add_Result(self, sched):
+
+	def Add_Result(self, game, score1, score2):
+		sql = 'INSERT INTO MLB_Outcome (GameID, Score1, Score2) VALUES (%s, %s, %s);'
+		con, cursor = DB.GetCursor(local=True)
+		cursor.execute(sql, (game.gameID, score1, score2))
+		con.commit()
 		print 'Add Result!'
-		pass
+		#updateSql = 
 
 
 class MLB_Game():
@@ -151,9 +157,10 @@ class MLB_Game():
 		elif gameKey2 in gameCache:
 			self.gameID, need_to_switch, has_outcome = gameCache[gameKey2]
 			self._SwitchTeams()
-			import pdb; pdb.set_trace()
+			#import pdb; pdb.set_trace()
 		else:
 			return -1
+		#import pdb; pdb.set_trace()
 		print has_outcome
 
 		if has_outcome == None:
