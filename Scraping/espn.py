@@ -48,14 +48,10 @@ class Espn():
 		if len(tds) < 2:  # Empty row
 			return None
 
-		#spreads = tds[1].findAll()
-
 		cols = tds[1].findAll('td', {u'width': u'50%'})
-		
 		print len(cols)
 
 		spreads = cols[0].text
-
 		s1, s2 = self.SplitAt(spreads, lambda x: x == '-', include=True)
 		
 		print spreads
