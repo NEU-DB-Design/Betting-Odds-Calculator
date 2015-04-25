@@ -14,8 +14,9 @@ logging.basicConfig(filename=LOG_FILENAME, level=logging.DEBUG)
 
 
 
-url = 'https://erikberg.com/mlb/results/pittsburgh-pirates.json?order=desc'
-headers = {'Authorization': 'Bearer afe75781-fd12-4a0a-ac3e-7c60abe05199'}
+url = 'https://erikberg.com/mlb/results/pittsburgh-pirates.json'
+headers = {'Authorization': 'Bearer afe75781-fd12-4a0a-ac3e-7c60abe05199',
+	   'User-agent': 'hunt.b.graham@gmail.com'}
 
 class MLB_Schedule():
 
@@ -146,28 +147,24 @@ class MLB_Game():
 	##
 	def CheckStatus(self, gameCache):
 		
+		fgk1 = ' '.join([str(i) for i in [self.Date, self.t1_id, self.t2_id]])
+		
 		gameKey1 = ' '.join([str(self.Date), str(self.t1_id), str(self.t2_id)])
 		gameKey2 = ' '.join([str(self.Date), str(self.t2_id), str(self.t1_id)])
 		need_to_switch, has_outcome = False, None
-		#import pdb; pdb.set_trace()
 
 		if gameKey1 in gameCache:
 			self.gameID, need_to_switch, has_outcome = gameCache[gameKey1]
-			#import pdb; pdb.set_trace()
 		elif gameKey2 in gameCache:
 			self.gameID, need_to_switch, has_outcome = gameCache[gameKey2]
 			self._SwitchTeams()
-			#import pdb; pdb.set_trace()
 		else:
 			return -1
-		#import pdb; pdb.set_trace()
 		print has_outcome
 
 		if has_outcome == None:
-			#import pdb; pdb.set_trace()
 			return 0
 		else:
-			#import pdb; pdb.set_trace()
 			return 1
 
 	def _SwitchTeams(self):
@@ -176,7 +173,6 @@ class MLB_Game():
 	def _ParseDate(self, date):
 		try:
 			d = dateutil.parser.parse(date)		
-			#date = str(d.year + '-' + str(d.month + '-' + str(d.day + ' ' + str(d.hour + ':' + str(d.minute + ':' + str(d.second)
 			return d.strftime('%Y-%m-%d %H:%M:%S')
 		except Exception, e:
 			print 'Date parse error: ' + str(e)
