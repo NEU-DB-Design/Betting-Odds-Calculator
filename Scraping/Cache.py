@@ -66,7 +66,7 @@ class GameCacheLong(CacheBase):
 
 		print '\nTeam id cache loaded.\n'
 
-class MLB_TeamCache(CacheBase):
+class MLB_NameCache(CacheBase):
 	sqlStr = 'SELECT Name, ID FROM MLB_Team'
 	
 	def _load(self):
@@ -76,6 +76,32 @@ class MLB_TeamCache(CacheBase):
 		for name, _id in self.cursor.fetchall():
 			if not name.lower() in self.cache:
 				self.cache[name.lower()] = _id
+
+class MLB_TeamCache(CacheBase):
+	sqlStr = 'SELECT Location, ID FROM MLB_Team'
+	
+	def _load(self):
+		self.cache = {}
+		self.cursor.execute(self.sqlStr)
+		
+		for location, _id in self.cursor.fetchall():
+			if not location.lower() in self.cache:
+				self.cache[location.lower()] = _id
+
+class MLB_TodaysGame(CacheBase):
+	sqlStr = 'SELECT DATE(Date), Team1_ID, Team2_ID, ID FROM MLB_Schedule WHERE DATE(Date) = DATE(DATE_SUB(NOW(), INTERVAL 4 HOUR))'
+	
+	def _load(self):
+		self.cache = {}
+		self.cursor.execute(self.sqlStr)
+		
+		for date, t1, t2, _id in self.cursor.fetchall():
+			key1 = ' '.join([str(i) for i in [date, t1, t2]])
+			key2 = ' '.join([str(i) for i in [date, t2, t1]])
+			if not key1.lower() in self.cache:
+				self.cache[key1.lower()] = _id
+			if not key2.lower() in self.cache:
+				self.cache[key2.lower()] = _id
 
 class MLB_GameCache(CacheBase):
 	#sqlStr = 'SELECT Date, Team1_ID, Team2_ID, ID FROM MLB_Schedule' # change to left join.
@@ -99,11 +125,12 @@ class MLB_GameCache(CacheBase):
 '''
 cnx, cur = DB.GetCursor(local=True)
 
-nc = MLB_GameCache(cnx)
+#nc = MLB_TodaysGame(cnx)
+nc = MLB_TeamCache(cnx)
 
 print nc.cache
 #test = '2014-11-01 Atlant Hawks Indiana Pacers'
-test = 'pirates'
+test = 'Brooklyn'
 print test in nc
 print nc[test]
 '''

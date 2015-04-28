@@ -9,12 +9,8 @@ import logging
 LOG_FILENAME = 'MLB_Schedule.txt'
 logging.basicConfig(filename=LOG_FILENAME, level=logging.DEBUG)
 
-#datetime.now()
-#logging.debug('')
 
-
-
-url = 'https://erikberg.com/mlb/results/pittsburgh-pirates.json'
+url = 'https://erikberg.com/mlb/results/%s.json'
 headers = {'Authorization': 'Bearer afe75781-fd12-4a0a-ac3e-7c60abe05199',
 	   'User-agent': 'hunt.b.graham@gmail.com'}
 
@@ -24,11 +20,16 @@ class MLB_Schedule():
 	teamCache = Cache.MLB_TeamCache(con)
 	gameCache = Cache.MLB_GameCache(con)
 	dbg = ''
-
+	
 	def Run(self):
+		for t in self.GetTeams():
+			#import pdb; pdb.set_trace()
+			self.ReadTeam(t)
+
+	def ReadTeam(self, team):
 
 		# Make API request
-		r = requests.get(url, headers=headers)
+		r = requests.get(url % team, headers=headers)
 		open('json_dump.txt', 'a').write(r.text)
 
 		# Attempt to parse JSON
@@ -76,19 +77,27 @@ class MLB_Schedule():
 			# Depending on status, add rows to MLB_Schedule
 			# and/or MLB_Outcome
 			if status == 1: 
-				#import pdb; pdb.set_trace()
 				print 'Have both!'
 				logging.debug('NOTHING')
 				continue
-			#elif status == -1 and completed == 'completed':
-				#self.Add_Both(game)
-				#logging.debug('Adding both')
 			elif status == -1:
 				self.Add_Schedule(game)
 				logging.debug('Adding schedule')
 			elif status == 0 and completed == 'completed':  
 				self.Add_Result(game, t1_score, t2_score)
 				logging.debug('ADDING RESULT!')
+			else:
+				print 'Nothing!'
+
+	def GetTeams(self):
+		sql = 'SELECT Location, Name FROM MLB_Team'
+		con, cursor = DB.GetCursor(local=True)
+		cursor.execute(sql)
+
+		formatFunc = lambda L, n: (L + ' ' + n).replace(' ', '-').replace('.', '').lower()
+		return [formatFunc(loc, name) for loc, name in cursor.fetchall()]
+		#return [(loc + ' ' + name).replace(' ', '-').replace('.', '') for loc, name in cursor.fetchall()]
+		
 			
 
 
@@ -147,22 +156,20 @@ class MLB_Game():
 	##
 	def CheckStatus(self, gameCache):
 		
-		fgk1 = ' '.join([str(i) for i in [self.Date, self.t1_id, self.t2_id]])
-		
-		gameKey1 = ' '.join([str(self.Date), str(self.t1_id), str(self.t2_id)])
-		gameKey2 = ' '.join([str(self.Date), str(self.t2_id), str(self.t1_id)])
+		k1 = ' '.join([str(i) for i in [self.Date, self.t1_id, self.t2_id]])
+		k2 = ' '.join([str(i) for i in [self.Date, self.t2_id, self.t1_id]])
 		need_to_switch, has_outcome = False, None
 
-		if gameKey1 in gameCache:
-			self.gameID, need_to_switch, has_outcome = gameCache[gameKey1]
-		elif gameKey2 in gameCache:
-			self.gameID, need_to_switch, has_outcome = gameCache[gameKey2]
+		if k1 in gameCache:
+			self.gameID, need_to_switch, has_outcome = gameCache[k1]
+		elif k2 in gameCache:
+			self.gameID, need_to_switch, has_outcome = gameCache[k2]
 			self._SwitchTeams()
 		else:
 			return -1
-		print has_outcome
 
 		if has_outcome == None:
+			#import pdb; pdb.set_trace()
 			return 0
 		else:
 			return 1
@@ -183,3 +190,6 @@ class MLB_Game():
 
 ms = MLB_Schedule()
 ms.Run()
+#ms.ReadTeam('pittsburgh-pirates')
+#ms.ReadTeam('cincinnati-reds')
+#print ms.GetTeams()
