@@ -6,6 +6,7 @@ from datetime import datetime
 
 class Espn():
 	
+	insertSql = 'INSERT INTO  `bets`.`MLB_BettingLine` (`GameID`, `ML1`, `ML2`, `Total`, `TML1`, `TML2`, `RunLine`, `RML1`, `RML2`) VALUES (%s,  %s,  %s,  %s,  %s,  %s,  %s,  %s, %s);'
 	url = 'http://espn.go.com/mlb/lines'
 	BL_map = {'BETONLINE.ag', 
 		  '5Dimes.eu', 
@@ -17,6 +18,7 @@ class Espn():
 		cnx, cur = DB.GetCursor(local=True)
 		self.TeamCache = Cache.MLB_TeamCache(cnx)
 		self.NameCache = Cache.MLB_NameCache(cnx)
+		self.GameCache = Cache.MLB_TodaysGame(cnx)
 	
 	def Run(self, debug=False):
 		r = requests.get(self.url)
@@ -34,14 +36,13 @@ class Espn():
 
 			print cls
 			if cls == 'stathead':
-				date = self.Parse_Stathead(tr.find('td').text)
-			elif date != None and cls != 'colhead':
-				self.Parse_DataRow(date, tr)
-				return
-			#print tr
+				_id, switch = self.Parse_Stathead(tr.find('td').text)
+				adf = raw_input('\ntype some shit please\n')
+			elif _id != None and cls != 'colhead':
+				self.Parse_DataRow(_id, switch, tr)
 
 	def Total(self, total):
-		return int(total.split(' ')[0])
+		return float(total.split(' ')[0])
 
 	def MoneyLine(self, mL):
 		spt = mL.split(' ')
@@ -53,17 +54,20 @@ class Espn():
 		size = len(spr.strip())
 		return float(spr[0 : size/2] )
 
-	def Parse_DataRow(self, date, row):
+	def Parse_DataRow(self, _id, switch, row):
 
 		print '\n'
 
 		tds = row.findAll('td', recursive=False)
 
 		site = tds[0].text
-		print "Site: " + str(site)
 
+		if 'injuries' in site.lower() or 'starting pitchers' in site.lower():
+			return None
 		if len(tds) < 2:  # Empty row
 			return None
+
+		print "Site: " + str(site)
 
 		moneyline = tds[1].text
 
@@ -85,51 +89,53 @@ class Espn():
 
 
 		t = self.Total(total)
-		mL = self.MoneyLine(moneyline)
-		tML = self.MoneyLine(totalML)
+		mL1, mL2 = self.MoneyLine(moneyline)
+		tML1, tML2 = self.MoneyLine(totalML)
 		rL = self.Spread(runline)
-		run_ML = self.MoneyLine(runline_ML)
-		
+		run_ML1, run_ML2 = self.MoneyLine(runline_ML)
 
-		print 'ML parsed: ' + str(mL)
+		# If team1/team2 is opposite of the representation in the DB,
+		# switch all the values.
+		if switch:
+			mL1, mL2 = mL2, mL1
+			tML1, tML2 = tML2, tML1
+			rL *= -1
+			run_ML1, run_ML2 = run_ML2, run_ML1
+		
+		cnx, cursor = DB.GetCursor(local=False)
+		cursor.execute(self.insertSql, (_id, mL1, mL2, t, tML1, tML2, rL, run_ML1, run_ML2))
+		cnx.commit()
+
+		print 'ML parsed: ' + str(mL1) + str(mL2)
 		print 'Total parsed: ' + str(t)
-		print 'Total ML parsed: ' + str(tML)
+		print 'Total ML parsed: ' + str(tML1) + str(tML2)
 		print 'Runline parsed: ' + str(rL)
-		print 'Runline ML parsed: ' + str(run_ML)
-
-
-		'''
-		spreads = cols[0].text
-		s1, s2 = self.SplitAt(spreads, lambda x: x == '-', include=True)
-		
-		print spreads
-
-		print float(s1)
-
-		print 'spread 1: ' + s1
-		print 'spread 2: ' + s2
-		'''
-
-	
+		print 'Runline ML parsed: ' + str(run_ML1) + str(run_ML2)
 
 		return ''
 
 	def Parse_Stathead(self, head):
+		#import pdb; pdb.set_trace()
 		print head
 		spls = head.split(',')
-		#print spls
-		#trm = map(lambda x: x.strip(), spls)
 		trm = self.TrimAll(spls)
 		print trm
 
-		teamWords = self.TrimAll(trm[0].split(' '))
+		# Split words by space, strip them, and remove any city abbreviations
+		#import pdb; pdb.set_trace()
+		fun = lambda x: x.lower() != 'la' and x.lower() != 'ny'
+		teamWords = [i.strip() for i in trm[0].split(' ') if fun(i)]
+
 		print teamWords
 		
+		# Find which list item is 'at'
 		if 'at' in teamWords:
 			index = teamWords.index('at')
 		else:
 			return None
 
+		# Get team words and seperate them by spaces
+		# IE: ['red', 'sox', 'at', 'pittsburgh'] -> 'red sox', 'pittsburgh'
 		firstTeam = ' '.join(teamWords[0:index]).strip()
 		secondTeam = ' '.join(teamWords[index+1 : len(teamWords)]).strip()
 
@@ -142,11 +148,11 @@ class Espn():
 		#print self.TeamCache.cache
 		if firstTeam in self.TeamCache:
 			t1_id = self.TeamCache[firstTeam]
-		elif secondTeam in self.NameCache:
+		elif firstTeam in self.NameCache:
 			t1_id = self.NameCache[firstTeam]
 		else:
 			print 'Team 1 cache miss!'
-			return None
+			return None, None
 
 		if secondTeam in self.TeamCache:
 			t2_id = self.TeamCache[secondTeam]
@@ -154,7 +160,7 @@ class Espn():
 			t2_id = self.NameCache[secondTeam]
 		else:
 			print 'Team 2 cache miss!'
-			return None
+			return None, None
 
 		today = datetime.now().strftime("%Y-%m-%d")
 		key1 = ' '.join(str(i) for i in [today, t1_id, t2_id])
@@ -162,9 +168,22 @@ class Espn():
 
 		print 'key1: ' + key1
 		print 'key2: ' + key2
+
+		in1 = key1 in self.GameCache
+		in2 = key2 in self.GameCache
+		print 'key1: ' + str(in1)
+		print 'key2: ' + str(in2)
 		
-		## Look up game here.
-		return 1 # replace this with real Game ID
+		#if not in1 and not in2:
+			#import pdb; pdb.set_trace()
+
+		if in1:
+			return self.GameCache[key1]
+		if in2:
+			return self.GameCache[key2]
+		else:
+			return None, None
+		
 
 	def SplitAt(self, item, fun, once=True, include=False):
 		accum = []

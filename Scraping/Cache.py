@@ -99,9 +99,9 @@ class MLB_TodaysGame(CacheBase):
 			key1 = ' '.join([str(i) for i in [date, t1, t2]])
 			key2 = ' '.join([str(i) for i in [date, t2, t1]])
 			if not key1.lower() in self.cache:
-				self.cache[key1.lower()] = _id
+				self.cache[key1.lower()] = _id, False
 			if not key2.lower() in self.cache:
-				self.cache[key2.lower()] = _id
+				self.cache[key2.lower()] = _id, True
 
 class MLB_GameCache(CacheBase):
 	#sqlStr = 'SELECT Date, Team1_ID, Team2_ID, ID FROM MLB_Schedule' # change to left join.
@@ -122,15 +122,14 @@ class MLB_GameCache(CacheBase):
 
 
 
-'''
 cnx, cur = DB.GetCursor(local=True)
 
 #nc = MLB_TodaysGame(cnx)
-nc = MLB_TeamCache(cnx)
+#nc = MLB_TeamCache(cnx)
+nc = MLB_NameCache(cnx)
 
 print nc.cache
 #test = '2014-11-01 Atlant Hawks Indiana Pacers'
-test = 'Brooklyn'
+test = 'White Sox'
 print test in nc
 print nc[test]
-'''
