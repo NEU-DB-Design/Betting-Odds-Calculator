@@ -11,6 +11,10 @@ class CacheBase():
 
 	def _load(self):
 		return 0
+	
+	def Reload(self):
+		self.cache.clear()
+		self._load()
 
 	def __contains__(self, key):
 		return key.lower() in self.cache
@@ -122,14 +126,16 @@ class MLB_GameCache(CacheBase):
 
 
 
+'''
 cnx, cur = DB.GetCursor(local=True)
 
 #nc = MLB_TodaysGame(cnx)
-#nc = MLB_TeamCache(cnx)
-nc = MLB_NameCache(cnx)
+nc = MLB_TeamCache(cnx)
+#nc = MLB_NameCache(cnx)
 
 print nc.cache
 #test = '2014-11-01 Atlant Hawks Indiana Pacers'
 test = 'White Sox'
 print test in nc
 print nc[test]
+'''

@@ -37,7 +37,7 @@ class Espn():
 			print cls
 			if cls == 'stathead':
 				_id, switch = self.Parse_Stathead(tr.find('td').text)
-				adf = raw_input('\ntype some shit please\n')
+				#adf = raw_input('\ntype some shit please\n')
 			elif _id != None and cls != 'colhead':
 				self.Parse_DataRow(_id, switch, tr)
 
@@ -105,6 +105,7 @@ class Espn():
 		cnx, cursor = DB.GetCursor(local=False)
 		cursor.execute(self.insertSql, (_id, mL1, mL2, t, tML1, tML2, rL, run_ML1, run_ML2))
 		cnx.commit()
+		open('espn_dump.txt', 'a').write('\nWrote outcome for game ID: ' + str(_id))
 
 		print 'ML parsed: ' + str(mL1) + str(mL2)
 		print 'Total parsed: ' + str(t)
