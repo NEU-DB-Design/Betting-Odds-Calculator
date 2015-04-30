@@ -52,8 +52,8 @@ class MLB_Schedule():
 		for t in reversed(self.GetTeams()):
 			#import pdb; pdb.set_trace()
 			self.ReadTeam(t)
-			self.gameCache.Reload()
-			time.sleep(5)
+			#self.gameCache.Reload()
+			time.sleep(1)
 
 	def ReadTeam(self, team):
 
@@ -108,20 +108,26 @@ class MLB_Schedule():
 			# Depending on status, add rows to MLB_Schedule
 			# and/or MLB_Outcome
 			if status == 1: 
-				#print 'Have both!'
-				logging.debug('NOTHING')
 				continue
 			elif status == -1:
 				#print 'Schedule'
+				self.AddToCache(game)
 				self.Add_Schedule(game)
 				logging.debug('Adding schedule')
 			elif status == 0 and completed == 'completed':  
-				#print 'Result'
+				print 'Result'
 				self.Add_Result(game, t1_score, t2_score)
 				logging.debug('ADDING RESULT!')
 			else:
 				continue
 				#print 'Nothing!'
+
+	def AddToCache(self, game):
+		k1, k2 = game.CreateKeys()
+		if k1 in self.gameCache.cache:
+			self.gameCache.cache[k1] = game.gameID
+		if k2 in self.gameCache.cache:
+			self.gameCache.cache[k2] = game.gameID
 
 	def GetTeams(self):
 		sql = 'SELECT Location, Name FROM MLB_Team'
@@ -136,6 +142,7 @@ class MLB_Schedule():
 
 
 	def Add_Schedule(self, game):
+		#import pdb; pdb.set_trace()
 		sql = 'INSERT INTO `bets`.`MLB_Schedule`(`API_GameID`,`Team1_ID`,`Team2_ID`,`Date`,`Result_ID`) VALUES (\'abc123\', %s, %s, %s, %s);'
 		con, cursor = DB.GetCursor(local=True)
 		cursor.execute(sql, (game.t1_id, game.t2_id, game.Date, None))
@@ -189,9 +196,44 @@ class MLB_Game():
 	##  1 -> Has both
 	##
 	def CheckStatus(self, gameCache):
+
+		#print 'before:'
+		sqlStr = 'SELECT sch.ID, (CASE WHEN sch.Team1_ID=%s THEN \'false\' ELSE \'true\' END), o.GameID FROM MLB_Schedule AS sch LEFT JOIN MLB_Outcome AS o ON sch.ID = o.GameID WHERE ((sch.Team1_ID=%s AND sch.Team2_ID=%s) OR (sch.Team2_ID=%s AND sch.Team1_ID=%s)) AND sch.Date=%s'
+
+		#print 'afer:'
+		cnx, cursor = DB.GetCursor(local=True)
+
+		d1= self.t1_id
+		d2= self.t2_id
+		d = self.Date
+
+		data = (d1, d1, d2, d1, d2, d)
+		cursor.execute(sqlStr, data)
+
+		foundGames = cursor.fetchall()
+		#import pdb; pdb.set_trace()
+
+		if len(foundGames) == 0:
+			return -1
+
+		gameID, switched, resID = foundGames[0]
+		self.gameID = gameID
+
+		if switched == 'true':
+			self._SwitchTeams()
+
+		if resID == None:
+			#print 'found, none'
+			return 0
+		else:
+			#print 'found, has result'
+			return 1
+
+		pass
 		
-		k1 = ' '.join([str(i) for i in [self.Date, self.t1_id, self.t2_id]])
-		k2 = ' '.join([str(i) for i in [self.Date, self.t2_id, self.t1_id]])
+		#k1 = ' '.join([str(i) for i in [self.Date, self.t1_id, self.t2_id]])
+		#k2 = ' '.join([str(i) for i in [self.Date, self.t2_id, self.t1_id]])
+		k1, k2 = self.CreateKeys()
 		need_to_switch, has_outcome = False, None
 
 		if k1 in gameCache:
@@ -208,6 +250,12 @@ class MLB_Game():
 		else:
 			return 1
 
+	def CreateKeys(self):
+		k1 = ' '.join([str(i) for i in [self.Date, self.t1_id, self.t2_id]])
+		k2 = ' '.join([str(i) for i in [self.Date, self.t2_id, self.t1_id]])
+		return k1, k2
+		
+
 	def _SwitchTeams(self):
 		self.t1_id, self.t2_id = self.t2_id, self.t1_id 
 
@@ -223,63 +271,9 @@ class MLB_Game():
 	
 
 ms = MLB_Schedule()
-#ms.Run()
+ms.Run()
 #for t in ms.GetTeams():
 #	print t
-#ms.ReadTeam('chicago-cubs')
-#ms.ReadTeam('cincinnati-reds')
-#print ms.GetTeams()
-'''
-ms.ReadTeam('arizona-diamondbacks')
-ms.ReadTeam('atlanta-braves')
-ms.ReadTeam('baltimore-orioles')
-ms.ReadTeam('boston-red-sox')
-ms.ReadTeam('chicago-cubs')
-ms.ReadTeam('chicago-white-sox')
+#ms.ReadTeam('pittsburgh-pirates')
 ms.ReadTeam('cincinnati-reds')
-ms.ReadTeam('cleveland-indians')
-time.sleep(1)
-ms.ReadTeam('colorado-rockies')
-time.sleep(1)
-ms.ReadTeam('detroit-tigers')
-time.sleep(1)
-ms.ReadTeam('houston-astros')
-time.sleep(1)
-ms.ReadTeam('kansas-city-royals')
-time.sleep(1)
-ms.ReadTeam('los-angeles-angels')
-time.sleep(1)
-'''
-ms.ReadTeam('los-angeles-dodgers')
-time.sleep(1)
-ms.ReadTeam('miami-marlins')
-time.sleep(1)
-ms.ReadTeam('milwaukee-brewers')
-time.sleep(1)
-ms.ReadTeam('minnesota-twins')
-time.sleep(1)
-ms.ReadTeam('new-york-mets')
-time.sleep(1)
-ms.ReadTeam('new-york-yankees')
-time.sleep(1)
-ms.ReadTeam('oakland-athletics')
-time.sleep(1)
-ms.ReadTeam('philadelphia-phillies')
-time.sleep(1)
-ms.ReadTeam('pittsburgh-pirates')
-time.sleep(1)
-ms.ReadTeam('san-diego-padres')
-time.sleep(1)
-ms.ReadTeam('san-francisco-giants')
-time.sleep(1)
-ms.ReadTeam('seattle-mariners')
-time.sleep(1)
-ms.ReadTeam('st-louis-cardinals')
-time.sleep(1)
-ms.ReadTeam('tampa-bay-rays')
-time.sleep(1)
-ms.ReadTeam('texas-rangers')
-time.sleep(1)
-ms.ReadTeam('toronto-blue-jays')
-time.sleep(1)
-ms.ReadTeam('washington-nationals')
+#print ms.GetTeams()
